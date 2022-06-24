@@ -24,6 +24,10 @@ export class SingleCarDisplayComponent implements OnInit {
   }
 
   onGetSingleCar() {
+    const el: HTMLElement | null = document.querySelector('#cardA')
+    if (el) {
+      el.classList.remove('active')
+    }
     this.getSingleCar().subscribe({
       next: (val: any) => {
         this.responseCar = new Car(
@@ -37,6 +41,12 @@ export class SingleCarDisplayComponent implements OnInit {
           val.carData[7][1],
           val.carData[8][1],
         )
+        setTimeout(() => {
+          const el: HTMLElement | null = document.querySelector('#cardA')
+          if (el) {
+            el.classList.add('active')
+          }
+        }, 500)
       },
       error(msg) {
         console.log('Error: ', msg);
