@@ -1,0 +1,16 @@
+:host ::ng-deep {
+  nb-card {
+    border-width: 0;
+  }
+  nb-menu {
+    margin-top: 20px;
+  }
+  ul.menu-items {
+    display: flex;
+    margin-top: 5px;
+    .menu-item {
+      margin-right: 5px;
+      border: 1px solid lightgray;
+    }
+  }
+}
