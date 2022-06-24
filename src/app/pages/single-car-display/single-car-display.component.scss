@@ -1,0 +1,15 @@
+.example-items-rows {
+  display: flex;
+  justify-content: space-evenly;
+  .spans-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    button {
+      justify-self: center;
+      align-self: center;
+      place-self: center;
+      margin: 1px;
+    }
+  }
+}

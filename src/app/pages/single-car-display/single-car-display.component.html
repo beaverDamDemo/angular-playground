@@ -1,0 +1,30 @@
+<p>ali naj bi vsaka karta imela attack/defense statistiko?</p>
+<nb-card>
+  <nb-card-header>Button Colors</nb-card-header>
+  <nb-card-body class="example-items-rows">
+    <div class="spans-container">
+      <span *ngFor="let f of [].constructor(36); let r = index">
+        <button nbButton status="info" size="tiny" (click)="onSpan(r)">
+          {{ r }}
+        </button>
+      </span>
+    </div>
+    <button nbButton status="primary" (click)="onGetSingleCar()">
+      get single Car <br />
+      {{ clickedSpan }}
+    </button>
+  </nb-card-body>
+  <nb-card-body class="example-items-rows">
+    <button nbButton status="success" (click)="onGetAllCars()">
+      get All Cars
+    </button>
+  </nb-card-body>
+  <nb-card-body class="example-items-rows">
+    <button nbButton status="info">Info</button>
+    <button nbButton status="warning">Warning</button>
+    <button nbButton status="danger">Danger</button>
+    <div class="control-status-example">
+      <button nbButton status="control">Control</button>
+    </div>
+  </nb-card-body>
+</nb-card>
