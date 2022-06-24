@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { from, Observable } from 'rxjs';
 import { map, tap } from "rxjs/operators";
 import { HttpClient } from "@angular/common/http";
+import { Car } from "../../strpedova"
 
 @Component({
   selector: 'app-single-car-display',
@@ -10,6 +11,8 @@ import { HttpClient } from "@angular/common/http";
 })
 export class SingleCarDisplayComponent implements OnInit {
   clickedSpan: number = 0
+  responseCar: any = undefined
+
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
@@ -23,7 +26,17 @@ export class SingleCarDisplayComponent implements OnInit {
   onGetSingleCar() {
     this.getSingleCar().subscribe({
       next: (val: any) => {
-        console.log("🚀 ~ file: single-car-display.component.ts ~ line 18 ~ SingleCarDisplayComponent ~ this.getSingleCar ~ val", val)
+        this.responseCar = new Car(
+          val.carData[0][1],
+          val.carData[1][1],
+          val.carData[2][1],
+          val.carData[3][1],
+          val.carData[4][1],
+          val.carData[5][1],
+          val.carData[6][1],
+          val.carData[7][1],
+          val.carData[8][1],
+        )
       },
       error(msg) {
         console.log('Error: ', msg);
