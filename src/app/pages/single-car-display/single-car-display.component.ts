@@ -42,7 +42,7 @@ export class SingleCarDisplayComponent implements OnInit {
           val.carData[7][1],
           val.carData[8][1],
         )
-        this.responseImage = "http://localhost:3000/images/cars/toyota_celica.jpeg"
+        this.responseImage = "http://localhost:3000/" + val.carData[6][1].slice(3)
         setTimeout(() => {
           const el: HTMLElement | null = document.querySelector('#cardA')
           if (el) {
@@ -85,8 +85,9 @@ export class SingleCarDisplayComponent implements OnInit {
     );
   }
 
-  getSingleCarImage(): Observable<Blob> {
-    return this.httpClient.get(`http://127.0.0.1:3000/cars/get-single-car-image/${this.clickedSpan}`, { responseType: 'blob' })
+  getSingleCarImage(): Observable<unknown> {
+    return this.httpClient.get(`http://127.0.0.1:3000/cars/get-single-car-image/${this.clickedSpan}`, {}).pipe(
+    )
   }
 
   getAllCars(): Observable<any> {
