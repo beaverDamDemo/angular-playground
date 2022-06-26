@@ -18,46 +18,49 @@
   </nb-card-body>
 </nb-card>
 <nb-card *ngIf="responseCar">
-  {{responseCar._id}}
-  {{responseCar._name}}
-  {{responseCar._cyl}}
-  {{responseCar._kw}}
-  {{responseCar._ccm}}
-  {{responseCar._kmh}}
-  {{responseCar._image_url}}
-  {{responseCar._choice_0}}
-  {{responseCar._choice_1}}
+  {{ responseCar._id }}
+  {{ responseCar._name }}
+  {{ responseCar._cyl }}
+  {{ responseCar._kw }}
+  {{ responseCar._ccm }}
+  {{ responseCar._kmh }}
+  {{ responseCar._image_url }}
+  {{ responseCar._choice_0 }}
+  {{ responseCar._choice_1 }}
 
-  <div id='cardA' class='card-container'>
+  <div id="cardA" class="card-container">
     <div class="card">
       <div class="card-front">
-        <div class='inner'>
-          <div class='upperPart'>
-            <div class='id'>{{responseCar._id}}</div>
-            <label class='name'>{{responseCar._name}}</label>
+        <div class="inner">
+          <div class="upperPart">
+            <div class="id">{{ responseCar._id }}</div>
+            <label class="name">{{ responseCar._name }}</label>
           </div>
-          <img alt="car's picture" src="" />
+          <img
+              alt="car's picture" [src]="responseImage"
+          />
           <table>
             <tr>
-              <td class='prop'>Motor:</td>
-              <td class='val zyl'>{{responseCar._cyl}} zyl.</td>
+              <td class="prop">Motor:</td>
+              <td class="val zyl">{{ responseCar._cyl }} zyl.</td>
             </tr>
             <tr>
-              <td class='prop'>Leistung:</td>
-              <td class='val kw'>{{responseCar._kw}} kW</td>
+              <td class="prop">Leistung:</td>
+              <td class="val kw">{{ responseCar._kw }} kW</td>
             </tr>
             <tr>
-              <td class='prop'>Hubraum:</td>
-              <td class='val ccm'>{{responseCar._ccm}} ccm</td>
+              <td class="prop">Hubraum:</td>
+              <td class="val ccm">{{ responseCar._ccm }} ccm</td>
             </tr>
             <tr>
-              <td class='prop'>Geschwindigkeit:</td>
-              <td class='val kmh'>{{responseCar._kmh}} km/h</td>
+              <td class="prop">Geschwindigkeit:</td>
+              <td class="val kmh">{{ responseCar._kmh }} km/h</td>
             </tr>
           </table>
         </div>
       </div>
       <div class="card-back"></div>
     </div>
-  </div><!-- cardA-->
+  </div>
+  <!-- cardA-->
 </nb-card>
