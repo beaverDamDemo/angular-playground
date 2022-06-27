@@ -17,7 +17,8 @@
 .upperPart {
   height: 48px;
 }
-.id, .name {
+.id,
+.name {
   padding-top: 22px;
   font-weight: bold;
   text-transform: capitalize;
@@ -77,11 +78,7 @@ table {
   left: 50%;
   transform: translateX(-50%);
 }
-#cardB {
-  position: absolute;
-  right: 0;
-  margin-right: 100px;
-}
+
 .card-container {
   perspective: 1200;
   width: 347px;
@@ -91,13 +88,14 @@ table {
 .card-container .card {
   height: 100%;
   width: 100%;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   transform-style: preserve-3d;
   transition: all 0.4s ease-in;
   transition: all 0.2s ease-out;
   transform: rotateY(179.9deg);
 }
-.card-container .card-front, .card-container .card-back {
+.card-container .card-front,
+.card-container .card-back {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -113,7 +111,7 @@ table {
   padding: 0 13px;
 }
 .card-container .card-back {
-  background: url('../../../assets/images/piatnik.jpg');
+  background: url("../../../assets/images/piatnik.jpg");
   background-size: 347px auto;
   border-radius: 33px;
   position: relative;
@@ -124,42 +122,12 @@ table {
   transform: rotateY(0deg);
   outline: none;
 }
-#cardADeep, #cardBDeep {
-  position: absolute;
-  width: 350px;
-  height: 522px;
-  left: 100px;
-  margin-top: 32px;
-  z-index: 0;
-}
-#cardADeep .inner, #cardBDeep .inner {
-  width: 350px;
-  height: 522px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border: 1px solid #777;
-  border-radius: 39px;
-  background: url('../../../assets/images/piatnik.jpg');
-  background-size: 347px auto;
-}
-#cardADeep .inner:nth-of-type(2n), #cardBDeep .inner:nth-of-type(2n) {
-  border-color: #444;
-}
-#cardBDeep {
-  left: 577px;
-}
+
 @media screen and (max-width: 900px) {
-  #cardADeep, #cardA, #cardBackA {
+  #cardA {
     left: 100px;
     margin-left: 0;
     margin-top: 16px;
     top: 0;
- }
-  #cardBDeep, #cardB, #cardBackB {
-    left: 100px;
-    margin-left: 0;
-    margin-top: 40px;
-    top: 600px;
- }
+  }
 }
