@@ -11,6 +11,8 @@ import { Car } from "../../strpedova"
 })
 export class SingleCarDisplayComponent implements OnInit {
   clickedSpan: number = 0
+  carPrevDisabled:boolean = false
+  carNextDisabled:boolean = false
   responseCar: any = undefined
   responseImage: string = ""
 
@@ -22,6 +24,16 @@ export class SingleCarDisplayComponent implements OnInit {
 
   onSpan(index: number) {
     this.clickedSpan = index
+    if(this.clickedSpan == 35) {
+      this.carNextDisabled = true
+    } else {
+      this.carNextDisabled = false
+    }
+    if(this.clickedSpan == 0) {
+      this.carPrevDisabled = true
+    } else {
+      this.carPrevDisabled = false
+    }
   }
 
   onGetSingleCar() {
@@ -79,10 +91,30 @@ export class SingleCarDisplayComponent implements OnInit {
   onCarPrevious() {
     this.clickedSpan = this.clickedSpan - 1
     this.onGetSingleCar()
+    if(this.clickedSpan == 0) {
+      this.carPrevDisabled = true
+    } else {
+      this.carPrevDisabled = false
+    }
+    if(this.clickedSpan == 35) {
+      this.carNextDisabled = true
+    } else {
+      this.carNextDisabled = false
+    }
   }
   onCarNext() {
     this.clickedSpan = this.clickedSpan + 1
     this.onGetSingleCar()
+    if(this.clickedSpan == 0) {
+      this.carPrevDisabled = true
+    } else {
+      this.carPrevDisabled = false
+    }
+    if(this.clickedSpan == 35) {
+      this.carNextDisabled = true
+    } else {
+      this.carNextDisabled = false
+    }
   }
 
   getSingleCar(): Observable<any> {
