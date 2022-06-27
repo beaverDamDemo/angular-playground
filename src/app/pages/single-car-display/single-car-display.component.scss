@@ -122,12 +122,3 @@ table {
   transform: rotateY(0deg);
   outline: none;
 }
-
-@media screen and (max-width: 900px) {
-  #cardA {
-    left: 100px;
-    margin-left: 0;
-    margin-top: 16px;
-    top: 0;
-  }
-}
