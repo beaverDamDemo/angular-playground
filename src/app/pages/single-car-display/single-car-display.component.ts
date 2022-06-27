@@ -57,8 +57,6 @@ export class SingleCarDisplayComponent implements OnInit {
 
     this.getSingleCarImage().subscribe({
       next: (val: any) => {
-        // console.log("🚀 ~ file: single-car-display.component.ts ~ line 58 ~ SingleCarDisplayComponent ~ this.getSingleCarImage ~ val", val)
-        // console.log(typeof(val))
         this.responseImage = val
       },
       error(msg) {
@@ -76,6 +74,15 @@ export class SingleCarDisplayComponent implements OnInit {
         console.log('Error: ', msg);
       }
     })
+  }
+
+  onCarPrevious() {
+    this.clickedSpan = this.clickedSpan - 1
+    this.onGetSingleCar()
+  }
+  onCarNext() {
+    this.clickedSpan = this.clickedSpan + 1
+    this.onGetSingleCar()
   }
 
   getSingleCar(): Observable<any> {

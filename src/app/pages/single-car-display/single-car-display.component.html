@@ -1,6 +1,9 @@
 <p>ali naj bi vsaka karta imela attack/defense statistiko?</p>
 <nb-card>
   <nb-card-body class="example-items-rows">
+    <button nbButton status="success" (click)="onCarPrevious()">
+      <nb-icon icon="arrow-ios-back-outline"></nb-icon>
+    </button>
     <div class="spans-container">
       <span *ngFor="let f of [].constructor(36); let r = index">
         <button nbButton status="info" size="tiny" (click)="onSpan(r)">
@@ -14,6 +17,9 @@
     </button>
     <button nbButton status="success" (click)="onGetAllCars()">
       get All Cars
+    </button>
+    <button nbButton status="success" (click)="onCarNext()">
+      <nb-icon icon="arrow-ios-forward-outline"></nb-icon>
     </button>
   </nb-card-body>
 </nb-card>
@@ -36,9 +42,7 @@
             <div class="id">{{ responseCar._id }}</div>
             <label class="name">{{ responseCar._name }}</label>
           </div>
-          <img
-              alt="car's picture" [src]="responseImage"
-          />
+          <img alt="car's picture" [src]="responseImage" />
           <table>
             <tr>
               <td class="prop">Motor:</td>
