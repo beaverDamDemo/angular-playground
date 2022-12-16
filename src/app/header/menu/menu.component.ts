@@ -25,6 +25,26 @@ export class MenuComponent implements OnInit {
       link: 'pages/single-car-display',
       icon: { icon: 'checkmark-outline', pack: 'eva' },
     },
+    {
+      title: 'Upload New Car',
+      link: 'pages',
+      icon: { icon: 'plus-circle-outline', pack: 'eva' },
+    },
+    {
+      title: 'Cars from API',
+      link: 'pages/cars-from-api',
+      icon: { icon: 'cast-outline', pack: 'eva' },
+    },
+    {
+      title: 'About',
+      link: 'pages/about',
+      icon: { icon: 'pantone-outline', pack: 'eva' },
+    },
+    {
+      title: 'Zemljevid',
+      link: 'pages/zemljevid',
+      icon: { icon: 'home-outline', pack: 'eva' },
+    },
   ];
   constructor() { }
 

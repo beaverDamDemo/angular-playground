@@ -1,0 +1,96 @@
+// .leaflet-container {
+//   width: 100%;
+//   height: 500px;
+// }
+// .leaflet-pane.leaflet-map-pane {
+//   width: 640px;
+//   height: 40vh;
+// }
+// #map-container {
+//   width: 1000px;
+//   height: 500px;
+//   border: 2px solid yellow;
+
+//   overflow: hidden;
+// }
+// #map {
+//   width: 100%;
+//   height: 100%;
+// }
+
+nb-card-body {
+  padding: 0;
+}
+
+::ng-deep .leaflet-top,
+::ng-deep .leaflet-bottom {
+  z-index: 997;
+}
+
+// ::ng-deep .leaflet-container {
+//   width: 100%;
+//   height: 400px;
+// }
+::ng-deep .leaflet-top.leaflet-right {
+  position: relative;
+  top: 42px;
+}
+
+#grayscaleInput {
+  background: #fffd;
+  display: inline-block;
+  position: absolute;
+  bottom: 53px;
+  right: 10px;
+  z-index: 1002;
+  padding: 4px 3px 0 3px;
+}
+#loadGeojsonButtonsContainer {
+  z-index: 1003;
+  position: absolute;
+  top: 5px;
+  left: 57px;
+  width: calc(100% - 114px);
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  button {
+    margin: 2px 5px;
+    text-transform: capitalize;
+  }
+}
+#inputsLegendContainer {
+  padding: 10px;
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    div:nth-of-type(6) label {
+      width: 100%;
+      text-align: center;
+    }
+    div label {
+      display: inline-block;
+      width: 140px;
+      border-radius: 0.25rem;
+      text-align: right;
+      font-weight: bold;
+      padding: 3px 7px;
+      height: 1.5rem;
+    }
+    input {
+      margin-bottom: 4px;
+      margin-left: 5px;
+      width: 10rem;
+      height: 1.6rem;
+    }
+    div:nth-child(2) button {
+      margin-left: 8px;
+    }
+  }
+}
+nb-radio {
+  display: inline;
+}

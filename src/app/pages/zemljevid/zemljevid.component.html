@@ -1,0 +1,136 @@
+<nb-card
+  [nbSpinner]="geojsonLoading"
+  nbSpinnerSize="giant"
+  nbSpinnerStatus="basic"
+>
+  <nb-card-body>
+    <div id="map-container">
+      <div
+        leaflet
+        id="map"
+        #map
+        [leafletOptions]="options"
+        (leafletMapReady)="onMapReady($event)"
+        style="width:100%; height:100vh;"
+      >
+        <div id="loadGeojsonButtonsContainer">
+          <button
+            nbButton
+            size="medium"
+            (click)="onLoadClick(l['buttonValue'])"
+            [nbSpinner]="geojsonLoading"
+            [status]="
+              selectedGeojson == l['buttonValue'] ? 'control' : 'primary'
+            "
+            *ngFor="let l of loadGeojsons"
+          >
+            {{ l["buttonLabel"] }}
+          </button>
+          <span class="flex-grow-1"></span>
+        </div>
+        <ng-template #dialog let-data let-ref="dialogRef">
+          <nb-card>
+            <nb-card-header
+              >Overview of Indicators for {{ data | titlecase }}
+            </nb-card-header>
+            <nb-card-body>
+              <img
+                src="{{
+                  'assets/images/overviewOfIndicators' +
+                    data[0].toUpperCase() +
+                    data.slice(1) +
+                    '.png'
+                }}"
+                alt=""
+              />
+            </nb-card-body>
+            <nb-card-footer>
+              <button nbButton (click)="ref.close()">Close</button>
+            </nb-card-footer>
+          </nb-card>
+        </ng-template>
+        <!-- <div id="grayscaleInput">
+          <input
+            type="range"
+            [(ngModel)]="grayscale"
+            (change)="grayscaleChange()"
+          />
+        </div> -->
+      </div>
+    </div>
+    <div id="inputsLegendContainer">
+      <form [formGroup]="newBrinkValues" (ngSubmit)="onApplyNewValuesSubmit()">
+        <div>
+          <div>
+            <label for="">1st color, up to</label>
+            <input
+              nbInput
+              size="tiny"
+              type="number"
+              min="0"
+              max="1000000"
+              formControlName="legend_0"
+            />
+          </div>
+          <div>
+            <label for="">2nd color, up to</label>
+            <input
+              nbInput
+              size="tiny"
+              type="number"
+              min="0"
+              max="1000000"
+              formControlName="legend_1"
+            />
+          </div>
+          <div>
+            <label for="">3rd color, up to</label>
+            <input
+              nbInput
+              size="tiny"
+              type="number"
+              min="0"
+              max="1000000"
+              formControlName="legend_2"
+            />
+          </div>
+          <div>
+            <label for="">4th color, up to</label>
+            <input
+              nbInput
+              size="tiny"
+              type="number"
+              min="0"
+              max="1000000"
+              formControlName="legend_3"
+            />
+          </div>
+          <div>
+            <label for="">5th color, up to</label>
+            <input
+              nbInput
+              size="tiny"
+              type="number"
+              min="0"
+              max="1000000"
+              formControlName="legend_4"
+            />
+          </div>
+          <div>
+            <label for="">6th color, up to unlimited</label>
+          </div>
+        </div>
+        <div>
+          <button
+            nbButton
+            status="primary"
+            type="submit"
+            [disabled]="!newBrinkValues.dirty"
+          >
+            Apply new values
+          </button>
+        </div>
+      </form>
+    </div>
+  </nb-card-body>
+</nb-card>
