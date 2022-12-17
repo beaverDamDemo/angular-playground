@@ -15,6 +15,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ZemljevidComponent } from './pages/zemljevid/zemljevid.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LeafletModule } from "@asymmetrik/ngx-leaflet";
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LeafletModule } from "@asymmetrik/ngx-leaflet";
     CarsFromApiComponent,
     AboutComponent,
     ZemljevidComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

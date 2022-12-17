@@ -1,1 +1,44 @@
 <p>about works!</p>
+<p
+  [ngStyle]="{
+    background: kabelcek.length % 2 == 0 ? 'dodgerblue' : 'rebeccapurple'
+  }"
+>
+  {{ tanjina }} - {{ kabelcek }}
+</p>
+<label for="">kabelcek</label>
+<input
+  nbInput
+  type="text"
+  (input)="onKabelcek($event)"
+  [(ngModel)]="kabelcek"
+/>
+<label for="">onInput</label>
+<input nbInput type="text" (input)="onInput($event)" />
+
+<label for="">minimum displacement</label>
+<input type="number" nbInput (input)="onMinDisplacement($event)" />
+<ul>
+  <li *ngFor="let c of getBigChainsaws()">
+    <div *ngIf="izbranaMotorka == c; else elseDel" style="background: green; width: 150px;">
+      <h6>{{ c["brand"] }}</h6>
+      <div>{{ c["model"] }}</div>
+      <div>{{ c["displacement"] }}</div>
+      <div>{{ c["barLength"] }}</div>
+      <button nbButton (click)="izbranaMotorka = c" status="success">izberi me</button>
+    </div>
+    <ng-template #elseDel>
+      <div style="background: crimson; width: 150px;">
+        <h6>{{ c["brand"] }}</h6>
+        <div>{{ c["model"] }}</div>
+        <div>{{ c["displacement"] }}</div>
+        <div>{{ c["barLength"] }}</div>
+        <button nbButton (click)="izbranaMotorka = c" status="danger">izberi me</button>
+      </div>
+    </ng-template>
+  </li>
+</ul>
+
+<input type="text" #maremma (keyup)="(0)" />
+<button nbButton (click)="sayHello(maremma)" cudenFont>Say Hello</button>
+<span appHighlight>{{ maremma.value }}</span>
