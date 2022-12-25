@@ -1,0 +1,12 @@
+<article style="display: flex">
+  <div
+    *ngFor="let m of prenosi"
+    style="border: 1px solid tan; padding: 30px; margin: 34px"
+  >
+    <div>{{ m.name }}</div>
+    <div>{{ m.gears }}</div>
+    <div>{{ m.configuration }}</div>
+  </div>
+</article>
+
+<input type="text" [formControl]="myControl">

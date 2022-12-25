@@ -1,6 +1,10 @@
 * {
   font-family: "Playfulist";
 }
+#motorke {
+  display: flex;
+  flex-direction: row;
+}
 li {
   margin-bottom: 10px;
 }
@@ -8,4 +12,18 @@ h6 {
   line-height: 100%;
   margin: 0;
   margin-bottom: 10px;
+}
+.najvecja {
+  border: 2px solid olivedrab;
+  background: yellowgreen;
+}
+#avtiContainer {
+  background: gray;
+  display: flex;
+  .avto {
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid yellowgreen;
+    background-color: darkgray;
+  }
 }

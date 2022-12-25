@@ -1,0 +1,12 @@
+article {
+  background: black;
+  color: wheat;
+  > div {
+    transition: all 0.6s;
+    &:hover {
+      background-color: wheat;
+      color: black;
+      font-weight: bold;
+    }
+  }
+}

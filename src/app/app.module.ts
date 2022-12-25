@@ -16,6 +16,17 @@ import { ZemljevidComponent } from './pages/zemljevid/zemljevid.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LeafletModule } from "@asymmetrik/ngx-leaflet";
 import { HighlightDirective } from './directives/highlight.directive';
+import { HoverDirective } from './directives/hover.directive';
+import { BetterHighlightDirective } from './directives/better-highlight.directive';
+import { NajvecjaDirective } from './directives/najvecja.directive';
+import { DodajAvtoComponent } from './pages/about/dodaj-avto/dodaj-avto.component';
+import { BelezkaService } from './services/belezka.service';
+import { KamjonComponent } from './pages/kamjon/kamjon.component';
+import { PrenosComponent } from './pages/kamjon/prenos/prenos.component';
+import { MotorComponent } from './pages/kamjon/motor/motor.component';
+import { PercentagePipe } from './percentage.pipe';
+import { CylindersPipe } from './pipes/cylinders.pipe';
+import { DisplacementPipe } from './pipes/displacement.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +37,17 @@ import { HighlightDirective } from './directives/highlight.directive';
     CarsFromApiComponent,
     AboutComponent,
     ZemljevidComponent,
-    HighlightDirective
+    HighlightDirective,
+    HoverDirective,
+    BetterHighlightDirective,
+    NajvecjaDirective,
+    DodajAvtoComponent,
+    KamjonComponent,
+    PrenosComponent,
+    MotorComponent,
+    PercentagePipe,
+    CylindersPipe,
+    DisplacementPipe
   ],
   imports: [
     BrowserModule,
@@ -47,7 +68,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     NbToastrModule.forRoot(),
     NbInputModule
   ],
-  providers: [],
+  providers: [BelezkaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

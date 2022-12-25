@@ -1,0 +1,18 @@
+<div class="form">
+  <div>
+    <input type="text" placeholder="Ime" id="ime" [(ngModel)]="ime">
+    <input type="text" placeholder="displacement" id="displacement" [(ngModel)]="displacement">
+    <input type="text" placeholder="weight" id="weight" [(ngModel)]="weight">
+    <input type="text" placeholder="power" id="power" [(ngModel)]="power">
+    <input type="text" placeholder="isV8" id="isV8" [(ngModel)]="isV8">
+  </div>
+  <div>
+    <select name="status" id="status" [(ngModel)]="status">
+      <option value="active">active</option>
+      <option value="inactive">inactive</option>
+    </select>
+  </div>
+  <div>
+    <button nbButton status="primary" (click)="onDodajAvto()">dodaj avto</button>
+  </div>
+</div>

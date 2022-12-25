@@ -18,27 +18,54 @@
 
 <label for="">minimum displacement</label>
 <input type="number" nbInput (input)="onMinDisplacement($event)" />
-<ul>
+<ul id="motorke">
   <li *ngFor="let c of getBigChainsaws()">
-    <div *ngIf="izbranaMotorka == c; else elseDel" style="background: green; width: 150px;">
+    <div [appNajvecja]="c.displacement === najvecjaMotorka.displacement">
+      ta spodaj je najvecja
+    </div>
+    <div
+      *ngIf="izbranaMotorka == c; else elseDel"
+      style="background: green; width: 150px"
+    >
       <h6>{{ c["brand"] }}</h6>
       <div>{{ c["model"] }}</div>
       <div>{{ c["displacement"] }}</div>
       <div>{{ c["barLength"] }}</div>
-      <button nbButton (click)="izbranaMotorka = c" status="success">izberi me</button>
+      <button nbButton (click)="izbranaMotorka = c" status="success">
+        izberi me
+      </button>
     </div>
     <ng-template #elseDel>
-      <div style="background: crimson; width: 150px;">
+      <div style="background: crimson; width: 150px">
         <h6>{{ c["brand"] }}</h6>
         <div>{{ c["model"] }}</div>
         <div>{{ c["displacement"] }}</div>
         <div>{{ c["barLength"] }}</div>
-        <button nbButton (click)="izbranaMotorka = c" status="danger">izberi me</button>
+        <button nbButton (click)="izbranaMotorka = c" status="danger">
+          izberi me
+        </button>
       </div>
     </ng-template>
   </li>
 </ul>
 
 <input type="text" #maremma (keyup)="(0)" />
-<button nbButton (click)="sayHello(maremma)" cudenFont>Say Hello</button>
-<span appHighlight>{{ maremma.value }}</span>
+<button nbButton (click)="sayHello(maremma)" status="warning" cudenFont>
+  Say Hello
+</button>
+<span appHighlight appHover>{{ maremma.value }}</span>
+<span [appBetterHighlight]="'violet'" [defaultOzadje]="'yellow'"
+  >Beter hightlgit z hostbindingh: {{ maremma.value }}</span
+>
+<div id="avtiContainer">
+  <div class="avto" *ngFor="let a of avti">
+    <div>{{ a.ime }}</div>
+    <div>{{ a.displacement }}</div>
+    <div>{{ a.weight }}</div>
+    <div>{{ a.power }}</div>
+    <div>{{ a.isV8 }}</div>
+    <div>{{ a.status }}</div>
+    <button size="small" nbButton status="info">Change status</button>
+  </div>
+</div>
+<app-dodaj-avto></app-dodaj-avto>

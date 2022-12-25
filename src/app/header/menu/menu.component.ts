@@ -45,6 +45,11 @@ export class MenuComponent implements OnInit {
       link: 'pages/zemljevid',
       icon: { icon: 'home-outline', pack: 'eva' },
     },
+    {
+      title: 'Kamjon',
+      link: 'pages/kamjon',
+      icon: { icon: 'car-outline', pack: 'eva' },
+    },
   ];
   constructor() { }
 

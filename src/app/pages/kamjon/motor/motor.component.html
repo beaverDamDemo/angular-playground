@@ -1,0 +1,25 @@
+<article style="display: flex; flex-wrap: wrap;">
+  <div
+    *ngFor="let m of motorji"
+    style="border: 1px solid black; padding: 10px; margin: 4px; background: silver"
+  >
+    <div>{{ m.name }}</div>
+    <div>{{ m.displacement | displacement: m.displacement }}</div>
+    <div>{{ m.configuration | cylinders: m.configuration }}</div>
+    <div>
+      <button
+        nbButton
+        status="danger"
+        (click)="
+          onShowDetails({
+            name: m.name,
+            displacement: m.displacement,
+            configuration: m.configuration
+          })
+        "
+      >
+        Show details
+      </button>
+    </div>
+  </div>
+</article>
