@@ -92,11 +92,10 @@ export class WhoresComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.selectedHaircut)
     this.whores.push({
       name: this.newWhoreForm.controls['Name'].value,
       age: this.newWhoreForm.controls['Age'].value,
-      height: this.newWhoreForm.controls['heightAndWeight']['controls']['Height'].value,
+      height: this.newWhoreForm.value.heightAndWeight.Height,
       weight: this.newWhoreForm.controls['heightAndWeight']['controls']['Weight'].value,
       boobSize: this.newWhoreForm.controls['Boob_size'].value,
       haircut: this.selectedHaircut
