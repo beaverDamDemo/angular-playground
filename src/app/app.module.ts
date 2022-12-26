@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbCardModule, NbButtonModule, NbMenuModule, NbIconModule, NbSpinnerModule, NbToastrModule, NbToastrService, NbInputModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbCardModule, NbButtonModule, NbMenuModule, NbIconModule, NbSpinnerModule, NbToastrModule, NbToastrService, NbInputModule, NbSelectModule, NbOptionModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { DraggableComponent } from './pages/draggable/draggable.component';
 import { SingleCarDisplayComponent } from './pages/single-car-display/single-car-display.component';
@@ -24,9 +24,11 @@ import { BelezkaService } from './services/belezka.service';
 import { KamjonComponent } from './pages/kamjon/kamjon.component';
 import { PrenosComponent } from './pages/kamjon/prenos/prenos.component';
 import { MotorComponent } from './pages/kamjon/motor/motor.component';
-import { PercentagePipe } from './percentage.pipe';
+import { PercentagePipe } from './pipes/percentage.pipe';
 import { CylindersPipe } from './pipes/cylinders.pipe';
 import { DisplacementPipe } from './pipes/displacement.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
+import { WhoresComponent } from './pages/whores/whores.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { DisplacementPipe } from './pipes/displacement.pipe';
     MotorComponent,
     PercentagePipe,
     CylindersPipe,
-    DisplacementPipe
+    DisplacementPipe,
+    FilterPipe,
+    WhoresComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +70,9 @@ import { DisplacementPipe } from './pipes/displacement.pipe';
     ReactiveFormsModule,
     LeafletModule,
     NbToastrModule.forRoot(),
-    NbInputModule
+    NbInputModule,
+    NbSelectModule,
+    NbOptionModule
   ],
   providers: [BelezkaService],
   bootstrap: [AppComponent]

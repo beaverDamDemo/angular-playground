@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class PercentagePipe implements PipeTransform {
 
-  transform(value: number, ...args: number[]): unknown {
-    return value * args[0]* 100;
+  transform(value: number): string {
+    return value + " valves/cylinder";
   }
 
 }

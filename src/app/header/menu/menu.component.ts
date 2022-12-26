@@ -50,6 +50,11 @@ export class MenuComponent implements OnInit {
       link: 'pages/kamjon',
       icon: { icon: 'car-outline', pack: 'eva' },
     },
+    {
+      title: 'Whores',
+      link: 'pages/whores',
+      icon: { icon: 'phone-call', pack: 'eva' },
+    },
   ];
   constructor() { }
 

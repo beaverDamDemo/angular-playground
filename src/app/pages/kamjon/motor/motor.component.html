@@ -1,15 +1,35 @@
-<article style="display: flex; flex-wrap: wrap;">
+<article style="display: flex; flex-wrap: wrap">
+  <input
+    type="text"
+    nbInput
+    placeholder="Search by nevemkaj"
+    style="width: 450px; padding: 2px 20px; margin: 10px 0; height: 2.5rem"
+    [(ngModel)]="_filterText"
+  />
+
   <div
-    *ngFor="let m of motorji"
-    style="border: 1px solid black; padding: 10px; margin: 4px; background: silver"
+    *ngFor="let m of filteredMotorji"
+    style="
+      border: 1px solid black;
+      padding: 10px;
+      margin: 4px;
+      background: silver;
+    "
   >
     <div>{{ m.name }}</div>
-    <div>{{ m.displacement | displacement: m.displacement }}</div>
-    <div>{{ m.configuration | cylinders: m.configuration }}</div>
+    <input
+      type="number"
+      value="m.valvesPerCylinder"
+      [(ngModel)]="m.valvesPerCylinder"
+    />
+    <div>{{ m.valvesPerCylinder | percentage }}</div>
+    <div>{{ m.displacement | displacement : m.displacement }}</div>
+    <div>{{ m.configuration | cylinders : m.configuration }}</div>
     <div>
       <button
         nbButton
         status="danger"
+        style="margin-top: 10px"
         (click)="
           onShowDetails({
             name: m.name,
@@ -22,4 +42,7 @@
       </button>
     </div>
   </div>
+  <button nbButton (click)="onAddDummyMotor()" status="primary">
+    onAddDummyMotor
+  </button>
 </article>

@@ -10,3 +10,10 @@
   font-family: "Playfulist";
   src: local("Playfulist"), url(./assets/fonts/Playfulist-rgPp8.ttf) format("truetype");
 }
+li, h1, h2, h3, h4, h5, h6, div, p {
+  font-family: "Playfulist";
+}
+
+button {
+  font-family: "Playfulist" !important;
+}

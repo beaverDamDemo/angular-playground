@@ -5,6 +5,7 @@ import { CarsFromApiComponent } from './pages/cars-from-api/cars-from-api.compon
 import { DraggableComponent } from './pages/draggable/draggable.component';
 import { KamjonComponent } from './pages/kamjon/kamjon.component';
 import { SingleCarDisplayComponent } from './pages/single-car-display/single-car-display.component';
+import { WhoresComponent } from './pages/whores/whores.component';
 import { ZemljevidComponent } from './pages/zemljevid/zemljevid.component';
 
 const routes: Routes = [
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: "pages/kamjon",
     component: KamjonComponent,
+  },
+  {
+    path: "pages/whores",
+    component: WhoresComponent,
   },
 ];
 
