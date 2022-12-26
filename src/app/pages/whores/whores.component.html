@@ -16,6 +16,7 @@
         <li>{{ w.height }} cm</li>
         <li>{{ w.weight }} kg</li>
         <li>boobs {{ w.boobSize }}</li>
+        <li>{{ w.haircut }}</li>
         <li style="list-style: none; line-height: 1.5rem">
           <button nbButton status="danger" (click)="onBookHer(w)">
             Book her
@@ -59,36 +60,38 @@
             <small>Age is required</small>
           </div>
         </div>
-        <div style="margin: 5px 0">
-          <input
-            nbInput
-            type="number"
-            placeholder="Height"
-            name="Height"
-            [(ngModel)]="height"
-            required
-            id="fheight"
-            #fheight="ngModel"
-            value="164"
-          />
-          <div *ngIf="fheight.invalid && fheight.touched">
-            <small>Height is required</small>
+        <div ngModelGroup="heightAndWeight" #heightAndWeight="ngModelGroup">
+          <div style="margin: 5px 0">
+            <input
+              nbInput
+              type="number"
+              placeholder="Height"
+              name="Height"
+              [(ngModel)]="height"
+              required
+              id="fheight"
+              #fheight="ngModel"
+              value="164"
+            />
+            <div *ngIf="fheight.invalid && fheight.touched">
+              <small>Height is required</small>
+            </div>
           </div>
-        </div>
-        <div style="margin: 5px 0">
-          <input
-            nbInput
-            type="number"
-            placeholder="Weight"
-            name="Weight"
-            [(ngModel)]="weight"
-            required
-            id="fweight"
-            #fweight="ngModel"
-            value="49"
-          />
-          <div *ngIf="fweight.invalid && fweight.touched">
-            <small>Weight is required</small>
+          <div style="margin: 5px 0">
+            <input
+              nbInput
+              type="number"
+              placeholder="Weight"
+              name="Weight"
+              [(ngModel)]="weight"
+              required
+              id="fweight"
+              #fweight="ngModel"
+              value="49"
+            />
+            <div *ngIf="fweight.invalid && fweight.touched">
+              <small>Weight is required</small>
+            </div>
           </div>
         </div>
         <div style="margin: 5px 0">
@@ -104,6 +107,16 @@
             <nb-option value="4">4</nb-option>
             <nb-option value="5">5</nb-option>
           </nb-select>
+        </div>
+        <div style="margin: 5px 0">
+          <label for="">Haircut: </label>
+          <span>
+            <nb-radio-group [(ngModel)]="selectedHaircut" name="haircut">
+              <nb-radio *ngFor="let h of haircuts" value="{{ h['value'] }}">{{
+                h["value"]
+              }}</nb-radio>
+            </nb-radio-group>
+          </span>
         </div>
         <button
           nbButton

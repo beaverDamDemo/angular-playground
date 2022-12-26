@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbCardModule, NbButtonModule, NbMenuModule, NbIconModule, NbSpinnerModule, NbToastrModule, NbToastrService, NbInputModule, NbSelectModule, NbOptionModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbCardModule, NbButtonModule, NbMenuModule, NbIconModule, NbSpinnerModule, NbToastrModule, NbToastrService, NbInputModule, NbSelectModule, NbOptionModule, NbRadioModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { DraggableComponent } from './pages/draggable/draggable.component';
 import { SingleCarDisplayComponent } from './pages/single-car-display/single-car-display.component';
@@ -72,7 +72,8 @@ import { WhoresComponent } from './pages/whores/whores.component';
     NbToastrModule.forRoot(),
     NbInputModule,
     NbSelectModule,
-    NbOptionModule
+    NbOptionModule,
+    NbRadioModule
   ],
   providers: [BelezkaService],
   bootstrap: [AppComponent]

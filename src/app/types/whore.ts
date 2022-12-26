@@ -4,4 +4,5 @@ export interface Whore {
   height: number,
   weight: number,
   boobSize?: number,
+  haircut?: string
 }
