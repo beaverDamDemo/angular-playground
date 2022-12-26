@@ -10,6 +10,11 @@ import { Whore } from 'src/app/types/whore';
 export class WhoresComponent implements OnInit {
   whores: Whore[] = []
   selectedWhore: Whore = undefined
+  defaultBoobSize = "2"
+  name: string = ""
+  age: number = 40
+  height: number = 166
+  weight: number = 48
   @ViewChild('newWhoreForm') newWhoreForm: NgForm
   constructor() { }
 
@@ -75,6 +80,7 @@ export class WhoresComponent implements OnInit {
       weight: this.newWhoreForm.controls['Weight'].value,
       boobSize: this.newWhoreForm.controls['Boob_size'].value
     })
+    this.newWhoreForm.reset()
   }
 
   onBookHer(w: Whore) {

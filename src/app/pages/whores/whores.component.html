@@ -11,13 +11,11 @@
             alt=""
           />
         </li>
-        <li style="line-height: 1.5rem">{{ w.name }}</li>
-        <li style="line-height: 1.5rem">{{ w.age }} yrs</li>
-        <li style="line-height: 1.5rem">{{ w.height }} cm</li>
-        <li style="line-height: 1.5rem">{{ w.weight }} kg</li>
-        <li style="line-height: 1.5rem">
-          boobs {{ w.boobSize }}
-        </li>
+        <li>{{ w.name }}</li>
+        <li>{{ w.age }} yrs</li>
+        <li>{{ w.height }} cm</li>
+        <li>{{ w.weight }} kg</li>
+        <li>boobs {{ w.boobSize }}</li>
         <li style="list-style: none; line-height: 1.5rem">
           <button nbButton status="danger" (click)="onBookHer(w)">
             Book her
@@ -35,10 +33,15 @@
             type="text"
             placeholder="Name"
             name="Name"
-            ngModel
+            [(ngModel)]="name"
             required
+            id="fname"
+            #fname="ngModel"
             value="Chanel"
           />
+          <div *ngIf="fname.invalid && fname.touched">
+            <small>Name is required</small>
+          </div>
         </div>
         <div style="margin: 5px 0">
           <input
@@ -46,10 +49,15 @@
             type="number"
             placeholder="Age"
             name="Age"
-            ngModel
+            [(ngModel)]="age"
             required
+            id="fage"
+            #fage="ngModel"
             value="40"
           />
+          <div *ngIf="fage.invalid && fage.touched">
+            <small>Age is required</small>
+          </div>
         </div>
         <div style="margin: 5px 0">
           <input
@@ -57,10 +65,15 @@
             type="number"
             placeholder="Height"
             name="Height"
-            ngModel
+            [(ngModel)]="height"
             required
+            id="fheight"
+            #fheight="ngModel"
             value="164"
           />
+          <div *ngIf="fheight.invalid && fheight.touched">
+            <small>Height is required</small>
+          </div>
         </div>
         <div style="margin: 5px 0">
           <input
@@ -68,13 +81,23 @@
             type="number"
             placeholder="Weight"
             name="Weight"
-            ngModel
+            [(ngModel)]="weight"
             required
+            id="fweight"
+            #fweight="ngModel"
             value="49"
           />
+          <div *ngIf="fweight.invalid && fweight.touched">
+            <small>Weight is required</small>
+          </div>
         </div>
         <div style="margin: 5px 0">
-          <nb-select placeholder="Boob size" name="Boob_size" ngModel required>
+          <nb-select
+            placeholder="Boob size"
+            name="Boob_size"
+            [ngModel]="defaultBoobSize"
+            required
+          >
             <nb-option value="1">1</nb-option>
             <nb-option value="2">2</nb-option>
             <nb-option value="3">3</nb-option>
@@ -82,7 +105,14 @@
             <nb-option value="5">5</nb-option>
           </nb-select>
         </div>
-        <button nbButton type="submit" status="success">submit</button>
+        <button
+          nbButton
+          type="submit"
+          status="success"
+          [disabled]="!newWhoreForm.valid"
+        >
+          submit
+        </button>
       </form>
     </nb-card>
     <nb-card>
