@@ -28,7 +28,11 @@
         <li>boobs {{ w.boobSize }}</li>
         <li>{{ w.haircut }}</li>
         <li style="list-style: none; line-height: 1.5rem">
-          <button nbButton (click)="onBookHer(w)" [status]="selectedWhore === w ? 'success' : 'danger'">
+          <button
+            nbButton
+            (click)="onBookHer(w)"
+            [status]="selectedWhore === w ? 'success' : 'danger'"
+          >
             Book her
           </button>
         </li>

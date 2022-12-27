@@ -17,6 +17,7 @@ export class YellowizeDirective {
   applyYellowize() {
     console.log("⛳ ~ this.el", this.el)
     this.el.nativeElement.style.backgroundColor = this.barva
+    this.renderer.addClass(this.el.nativeElement, "yellowized")
     this.renderer.setStyle(this.el.nativeElement, "border", "1px solid maroon")
   }
 }

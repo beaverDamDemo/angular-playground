@@ -17,6 +17,9 @@ nb-card {
     li {
       color: white;
     }
+    &.yellowized {
+      background-color: darkseagreen !important;
+    }
   }
   li.img-container {
     img {
