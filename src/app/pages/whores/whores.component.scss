@@ -3,6 +3,7 @@ nb-card {
   padding: 10px;
   background-color: rgb(255, 140, 139);
   color: rgb(130, 30, 116);
+  border: 1px solid rgb(65, 15, 71);
   li {
     list-style: none;
     line-height: 1.5rem;
@@ -16,9 +17,6 @@ nb-card {
     background-color: rgb(130, 30, 116);
     li {
       color: white;
-    }
-    button {
-      background-color: rgb(65, 15, 71) !important;
     }
   }
   li.img-container {

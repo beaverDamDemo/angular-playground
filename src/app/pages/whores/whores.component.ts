@@ -1,15 +1,15 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Form, NgForm } from '@angular/forms';
 import { Whore } from 'src/app/types/whore';
 import { StoreService } from 'src/app/services/store.service';
-import { map } from 'rxjs';
+import { map, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-whores',
   templateUrl: './whores.component.html',
   styleUrls: ['./whores.component.scss']
 })
-export class WhoresComponent implements OnInit {
+export class WhoresComponent implements OnInit, OnDestroy {
   whores: Whore[] = []
   selectedWhore: Whore = undefined
   defaultBoobSize = "2"
@@ -30,13 +30,14 @@ export class WhoresComponent implements OnInit {
   selectedHaircut: any = "Depilirana"
   loading: boolean = false
   errorMessage: string = ""
+  getStoresSubscription: Subscription
 
   @ViewChild('newWhoreForm') newWhoreForm: NgForm
   constructor(private storeService: StoreService) { }
 
   ngOnInit(): void {
     this.loading = true
-    this.storeService.getStoresAll().pipe(
+    this.getStoresSubscription = this.storeService.getStoresAll().pipe(
       map((res: {
         name: string, storeAddress: string, storePhoneNumber: string
       }) => {
@@ -115,6 +116,10 @@ export class WhoresComponent implements OnInit {
         haircut: "Depilirana"
       },
     )
+  }
+
+  ngOnDestroy(): void {
+    this.getStoresSubscription.unsubscribe()
   }
 
   onSubmit() {

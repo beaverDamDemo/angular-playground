@@ -11,6 +11,8 @@
     <nb-card
       *ngFor="let w of whores"
       [className]="selectedWhore === w ? 'active' : ''"
+      appYellowize
+      [barva]="'gold'"
     >
       <ul style="text-align: right">
         <li class="img-container">
@@ -26,7 +28,7 @@
         <li>boobs {{ w.boobSize }}</li>
         <li>{{ w.haircut }}</li>
         <li style="list-style: none; line-height: 1.5rem">
-          <button nbButton status="danger" (click)="onBookHer(w)">
+          <button nbButton (click)="onBookHer(w)" [status]="selectedWhore === w ? 'success' : 'danger'">
             Book her
           </button>
         </li>

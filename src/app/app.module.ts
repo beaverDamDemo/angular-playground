@@ -29,6 +29,7 @@ import { CylindersPipe } from './pipes/cylinders.pipe';
 import { DisplacementPipe } from './pipes/displacement.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { WhoresComponent } from './pages/whores/whores.component';
+import { YellowizeDirective } from './directives/yellowize.directive';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { WhoresComponent } from './pages/whores/whores.component';
     CylindersPipe,
     DisplacementPipe,
     FilterPipe,
-    WhoresComponent
+    WhoresComponent,
+    YellowizeDirective
   ],
   imports: [
     BrowserModule,
