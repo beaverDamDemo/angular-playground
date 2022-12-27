@@ -37,6 +37,16 @@ const routes: Routes = [
     path: "pages/whores",
     component: WhoresComponent,
   },
+  {
+    path: "drevi",
+    loadChildren: () =>
+      import("./drevi/drevi.module").then(module => module.DreviModule)
+  },
+  {
+    path: 'avti-iz-oglasov',
+    loadChildren: () =>
+      import('./avti-iz-oglasov/avti-iz-oglasov.module').then(module => module.AvtiIzOglasovModule)
+  }
 ];
 
 @NgModule({

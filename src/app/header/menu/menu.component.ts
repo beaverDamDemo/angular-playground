@@ -55,6 +55,16 @@ export class MenuComponent implements OnInit {
       link: 'pages/whores',
       icon: { icon: 'phone-call', pack: 'eva' },
     },
+    {
+      title: 'drevi',
+      link: 'drevi',
+      icon: { icon: 'thermometer-minus', pack: 'eva' },
+    },
+    {
+      title: 'avti',
+      link: 'avti-iz-oglasov',
+      icon: { icon: 'thermometer-plus', pack: 'eva' },
+    },
   ];
   constructor() { }
 
