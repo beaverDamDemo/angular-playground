@@ -1,4 +1,12 @@
 <article>
+  <table>
+    <tr *ngIf="errorMessage != null">
+      <td>{{ errorMessage }}</td>
+    </tr>
+    <tr *ngIf="loading && !errorMessage">
+      <td>Loading from heroku ...</td>
+    </tr>
+  </table>
   <div style="display: flex; flex-wrap: wrap">
     <nb-card
       *ngFor="let w of whores"

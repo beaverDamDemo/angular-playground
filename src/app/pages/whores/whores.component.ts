@@ -28,11 +28,14 @@ export class WhoresComponent implements OnInit {
     },
   ]
   selectedHaircut: any = "Depilirana"
+  loading: boolean = false
+  errorMessage: string = ""
 
   @ViewChild('newWhoreForm') newWhoreForm: NgForm
   constructor(private storeService: StoreService) { }
 
   ngOnInit(): void {
+    this.loading = true
     this.storeService.getStoresAll().pipe(
       map((res: {
         name: string, storeAddress: string, storePhoneNumber: string
@@ -48,6 +51,11 @@ export class WhoresComponent implements OnInit {
       }))
       .subscribe(products => {
         console.log("⛳ ~ products", products)
+        this.loading = false
+      }, (err) => {
+        console.log("⛳ ~ err", err)
+        this.errorMessage = err
+        this.loading = false
       })
     this.whores.push(
       {
