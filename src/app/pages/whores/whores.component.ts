@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Form, NgForm } from '@angular/forms';
 import { Whore } from 'src/app/types/whore';
+import { StoreService } from 'src/app/services/store.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-whores',
@@ -28,9 +30,25 @@ export class WhoresComponent implements OnInit {
   selectedHaircut: any = "Depilirana"
 
   @ViewChild('newWhoreForm') newWhoreForm: NgForm
-  constructor() { }
+  constructor(private storeService: StoreService) { }
 
   ngOnInit(): void {
+    this.storeService.getStoresAll().pipe(
+      map((res: {
+        name: string, storeAddress: string, storePhoneNumber: string
+      }) => {
+        console.log(res)
+        const products = []
+        for (const c in res) {
+          if (res.hasOwnProperty(c)) {
+            products.push({ ...res[c], id: c })
+          }
+        }
+        return products
+      }))
+      .subscribe(products => {
+        console.log("⛳ ~ products", products)
+      })
     this.whores.push(
       {
         name: "Petra1",
@@ -106,4 +124,5 @@ export class WhoresComponent implements OnInit {
   onBookHer(w: Whore) {
     this.selectedWhore = w
   }
+
 }
