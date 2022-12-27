@@ -20,7 +20,7 @@
 <input type="number" nbInput (input)="onMinDisplacement($event)" />
 <ul id="motorke">
   <li *ngFor="let c of getBigChainsaws()">
-    <div [appNajvecja]="c.displacement === najvecjaMotorka.displacement">
+    <div>
       ta spodaj je najvecja
     </div>
     <div
@@ -53,7 +53,7 @@
 <button nbButton (click)="sayHello(maremma)" status="warning" cudenFont>
   Say Hello
 </button>
-<span appHighlight appHover>{{ maremma.value }}</span>
+<span appHighlight>{{ maremma.value }}</span>
 <span [appBetterHighlight]="'violet'" [defaultOzadje]="'yellow'"
   >Beter hightlgit z hostbindingh: {{ maremma.value }}</span
 >

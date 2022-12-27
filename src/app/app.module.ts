@@ -15,10 +15,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ZemljevidComponent } from './pages/zemljevid/zemljevid.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LeafletModule } from "@asymmetrik/ngx-leaflet";
-import { HighlightDirective } from './directives/highlight.directive';
-import { HoverDirective } from './directives/hover.directive';
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
-import { NajvecjaDirective } from './directives/najvecja.directive';
 import { DodajAvtoComponent } from './pages/about/dodaj-avto/dodaj-avto.component';
 import { BelezkaService } from './services/belezka.service';
 import { KamjonComponent } from './pages/kamjon/kamjon.component';
@@ -40,10 +37,7 @@ import { YellowizeDirective } from './directives/yellowize.directive';
     CarsFromApiComponent,
     AboutComponent,
     ZemljevidComponent,
-    HighlightDirective,
-    HoverDirective,
     BetterHighlightDirective,
-    NajvecjaDirective,
     DodajAvtoComponent,
     KamjonComponent,
     PrenosComponent,

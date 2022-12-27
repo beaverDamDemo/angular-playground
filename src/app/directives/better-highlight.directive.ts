@@ -29,5 +29,11 @@ export class BetterHighlightDirective implements OnInit {
 
   ngOnInit(): void {
     this.ozadje = this.defaultOzadje
+
+    this.renderer.setStyle(this.element.nativeElement, "text-decoration", "underline")
+    this.renderer.setStyle(this.element.nativeElement, "font-weight", "bold")
+    this.renderer.setStyle(this.element.nativeElement, "font-family", "serif")
+    this.renderer.addClass(this.element.nativeElement, "myClass")
+    this.renderer.setAttribute(this.element.nativeElement, "title", "I am th etitle")
   }
 }
