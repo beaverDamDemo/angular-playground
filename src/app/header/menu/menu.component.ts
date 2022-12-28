@@ -11,11 +11,6 @@ import { NbMenuItem } from '@nebular/theme';
 export class MenuComponent implements OnInit {
   items: NbMenuItem[] = [
     {
-      title: 'Home',
-      link: '/',
-      icon: 'person-outline',
-    },
-    {
       title: 'Draggable',
       link: 'pages/draggable',
       icon: 'lock-outline',
