@@ -46,6 +46,10 @@ const routes: Routes = [
     path: 'avti-iz-oglasov',
     loadChildren: () =>
       import('./avti-iz-oglasov/avti-iz-oglasov.module').then(module => module.AvtiIzOglasovModule)
+  },
+  {
+    path: 'oljkice',
+    loadChildren: () => import('./oljkice/oljkice/oljkice.module').then(module => module.OljkiceModule)
   }
 ];
 

@@ -60,6 +60,11 @@ export class MenuComponent implements OnInit {
       link: 'avti-iz-oglasov',
       icon: { icon: 'thermometer-plus', pack: 'eva' },
     },
+    {
+      title: 'oljkice',
+      link: 'oljkice',
+      icon: { icon: 'sun', pack: 'eva' },
+    },
   ];
   constructor() { }
 
