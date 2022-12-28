@@ -1,1 +1,8 @@
 <p>doma works!</p>
+<section>
+  <div *ngFor="let o of oljkice" class="oljkica">
+    <p *ngFor="let kv of o | keyvalue">
+      {{ kv.value }}
+    </p>
+  </div>
+</section>

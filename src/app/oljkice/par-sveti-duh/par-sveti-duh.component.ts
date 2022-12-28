@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OljkiceService } from '../oljkice/oljkice.service';
 
 @Component({
   selector: 'app-par-sveti-duh',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParSvetiDuhComponent implements OnInit {
 
-  constructor() { }
+  constructor(private oljkiceService: OljkiceService) { }
 
   ngOnInit(): void {
+    this.oljkiceService.dodajOljkico('na trikotniku 1', 'na trikotniku')
   }
 
 }

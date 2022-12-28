@@ -1,0 +1,30 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.oljkica {
+  background-color: gray;
+  background-image: url("../../../assets/images/oljkica.jpg");
+  min-height: 150px;
+  width: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 2px;
+  transition: all 0.7s;
+  transition-delay: 2s;
+  p {
+    color: #fff;
+    font-weight: bold;
+    transition: color 4s;
+  }
+  &:hover {
+    transform: scale(1.1);
+    transition-delay: 0s;
+    p {
+      color: #ffef50;
+    }
+  }
+}
