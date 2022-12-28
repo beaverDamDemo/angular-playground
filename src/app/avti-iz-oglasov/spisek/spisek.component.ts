@@ -14,7 +14,7 @@ export class SpisekComponent implements OnInit {
 
   ngOnInit(): void {
     this.avti.push({
-      name: "BMW serija 3: 318i",
+      'ime': "BMW serija 3: 318i",
       'Prva registracija': '2002 / 12',
       'Prevoženih': '280000 km',
       'Vrsta goriva': 'bencin',
@@ -24,7 +24,7 @@ export class SpisekComponent implements OnInit {
       'lokacija': 'Koper',
       'dodatno': 'LPG'
     }, {
-      name: 'BMW serija 5: 520i limuzina',
+      'ime': 'BMW serija 5: 520i limuzina',
       'Prva registracija': '      2004 / 12',
       'Prevoženih': '      300000 km',
       'Vrsta goriva': '      bencin',

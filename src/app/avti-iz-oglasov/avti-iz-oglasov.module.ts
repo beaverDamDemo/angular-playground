@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AvtiIzOglasovRoutingModule } from './avti-iz-oglasov-routing.module';
 import { SpisekComponent } from './spisek/spisek.component';
-import { NbButtonModule, NbCardModule, NbLayoutModule } from '@nebular/theme';
+import { NbButtonModule, NbCardModule, NbIconModule, NbLayoutModule } from '@nebular/theme';
 
 
 @NgModule({
@@ -15,7 +15,8 @@ import { NbButtonModule, NbCardModule, NbLayoutModule } from '@nebular/theme';
     AvtiIzOglasovRoutingModule,
     NbLayoutModule,
     NbButtonModule,
-    NbCardModule
+    NbCardModule,
+    NbIconModule
   ]
 })
 export class AvtiIzOglasovModule { }

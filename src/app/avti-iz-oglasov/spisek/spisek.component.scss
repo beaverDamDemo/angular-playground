@@ -1,3 +1,18 @@
-li {
-  list-style-type: none;
+nb-card {
+  color: rgb(27, 29, 28);
+  background-color: rgb(146, 87, 169);
+  width: 478px;
+  padding: 20px 30px;
+  > div {
+    list-style-type: none;
+    line-height: 1.5rem;
+    margin: 1px 0;
+    span:nth-child(1) {
+      display: inline-block;
+      width: 180px;
+    }
+    span:nth-child(2) {
+      text-align: right;
+    }
+  }
 }
