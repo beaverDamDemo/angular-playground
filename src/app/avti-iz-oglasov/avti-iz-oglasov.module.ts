@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AvtiIzOglasovRoutingModule } from './avti-iz-oglasov-routing.module';
 import { SpisekComponent } from './spisek/spisek.component';
+import { NbButtonModule, NbCardModule, NbLayoutModule } from '@nebular/theme';
 
 
 @NgModule({
@@ -11,7 +12,10 @@ import { SpisekComponent } from './spisek/spisek.component';
   ],
   imports: [
     CommonModule,
-    AvtiIzOglasovRoutingModule
+    AvtiIzOglasovRoutingModule,
+    NbLayoutModule,
+    NbButtonModule,
+    NbCardModule
   ]
 })
 export class AvtiIzOglasovModule { }

@@ -7,10 +7,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./spisek.component.scss']
 })
 export class SpisekComponent implements OnInit {
+  avti: any[] = []
+  Object = Object;
 
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
+    this.avti.push({
+      name: "BMW serija 3: 318i",
+      'Prva registracija': '2002 / 12',
+      'Prevoženih': '280000 km',
+      'Vrsta goriva': 'bencin',
+      'Moč motorja': '88 kW  / 120 KM',
+      'Menjalnik': 'ročni 5 pr.',
+      'cena': 2500,
+      'lokacija': 'Koper',
+      'dodatno': 'LPG'
+    }, {
+      name: 'BMW serija 5: 520i limuzina',
+      'Prva registracija': '      2004 / 12',
+      'Prevoženih': '      300000 km',
+      'Vrsta goriva': '      bencin',
+      'Moč motorja': '      125 kW  / 170 KM',
+      'Menjalnik': '      ročni 6 pr.',
+      'cena': 3400,
+      'lokacija': 'Ljubljana'
+    })
+  }
+
+  onFindSpecs(): void {
     const options = {
       method: 'GET',
       headers: {
@@ -23,8 +48,6 @@ export class SpisekComponent implements OnInit {
       .then(response => response.json())
       .then(response => console.log(response))
       .catch(err => console.error(err));
-
-
 
   }
 

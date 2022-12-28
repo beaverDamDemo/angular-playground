@@ -1,1 +1,22 @@
-<p>spisek works!</p>
+<nb-layout>
+  <nb-layout-header><p>spisek works!</p></nb-layout-header>
+  <nb-layout-column> Nina, Nina, Nina </nb-layout-column>
+  <nb-layout-column class="colored-column-warning">Second</nb-layout-column>
+  <nb-layout-column class="colored-column-info">Third</nb-layout-column>
+
+  <nb-layout-column *ngFor="let a of avti">
+    <nb-card>
+    <ul>
+      <li *ngFor="let l of Object.entries(a)">
+        {{ l }}
+      </li>
+    </ul>
+  </nb-card>
+  </nb-layout-column>
+
+  <nb-layout-footer>
+    <button nbButton status="success" (click)="onFindSpecs()">
+      Find specs
+    </button>
+  </nb-layout-footer>
+</nb-layout>
