@@ -29,6 +29,7 @@ import { WhoresComponent } from './pages/whores/whores.component';
 import { YellowizeDirective } from './directives/yellowize.directive';
 import { ParSvetiDuhComponent } from './oljkice/par-sveti-duh/par-sveti-duh.component';
 import { DomaComponent } from './oljkice/doma/doma.component';
+import { VseOljkiceComponent } from './oljkice/vse-oljkice/vse-oljkice.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { DomaComponent } from './oljkice/doma/doma.component';
     WhoresComponent,
     YellowizeDirective,
     ParSvetiDuhComponent,
-    DomaComponent
+    DomaComponent,
+    VseOljkiceComponent
   ],
   imports: [
     BrowserModule,

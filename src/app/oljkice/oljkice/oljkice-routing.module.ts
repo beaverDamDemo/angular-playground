@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DomaComponent } from '../doma/doma.component';
 import { ParSvetiDuhComponent } from '../par-sveti-duh/par-sveti-duh.component';
+import { VseOljkiceComponent } from '../vse-oljkice/vse-oljkice.component';
 
 const routes: Routes = [
   {
     path: "",
-    component: DomaComponent
+    component: VseOljkiceComponent
   },
   {
     path: "doma",
