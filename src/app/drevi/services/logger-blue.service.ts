@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Sporocilco } from '../interfaces/sporocilco';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class LoggerBlueService {
 
   constructor() { }
 
-  log(message: string) {
-    console.log(`%c ${message} from logger blue`, "background: dodgerblue; color: black; font-weight: bold; font-family: serif")
+  log(podatki: Sporocilco) {
+    console.log(`%c ${podatki.msg} from logger blue`, `background: dodgerblue; color: black; font-weight: bold; font-family: serif`)
   }
 }

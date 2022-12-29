@@ -79,7 +79,8 @@ import { VVazahComponent } from './oljkice/v-vazah/v-vazah.component';
     NbInputModule,
     NbSelectModule,
     NbOptionModule,
-    NbRadioModule
+    NbRadioModule,
+    NbMenuModule.forRoot(),
   ],
   providers: [BelezkaService, { provide: LogService, useClass: UpdatedLogService }, {
     provide: UpdatedLogService, useClass: UpdatedLogService

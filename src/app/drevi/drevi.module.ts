@@ -5,6 +5,10 @@ import { DreviRoutingModule } from './drevi-routing.module';
 import { KacijaComponent } from './kacija/kacija.component';
 import { NjelComponent } from './njel/njel.component';
 import { DreviComponent } from './drevi/drevi.component';
+import { LoggerDefaultService } from './services/logger-default.service';
+import { LoggerBlueService } from './services/logger-blue.service';
+import { APIKEY_we_will_use_this_to_pass_value } from './value';
+import { NbMenuItem, NbMenuModule } from '@nebular/theme';
 
 
 @NgModule({
@@ -15,7 +19,17 @@ import { DreviComponent } from './drevi/drevi.component';
   ],
   imports: [
     CommonModule,
-    DreviRoutingModule
+    DreviRoutingModule,
+    NbMenuModule
+  ],
+  providers: [
+    {
+      provide: LoggerDefaultService,
+      useClass: LoggerDefaultService
+    },
+    {
+      provide: APIKEY_we_will_use_this_to_pass_value, useValue: { apikey: '123456' }
+    }
   ]
 })
 export class DreviModule { }
