@@ -30,6 +30,9 @@ import { YellowizeDirective } from './directives/yellowize.directive';
 import { ParSvetiDuhComponent } from './oljkice/par-sveti-duh/par-sveti-duh.component';
 import { DomaComponent } from './oljkice/doma/doma.component';
 import { VseOljkiceComponent } from './oljkice/vse-oljkice/vse-oljkice.component';
+import { LogService } from './oljkice/oljkice/log.service';
+import { UpdatedLogService } from './oljkice/oljkice/updated-log.service';
+import { VVazahComponent } from './oljkice/v-vazah/v-vazah.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +56,8 @@ import { VseOljkiceComponent } from './oljkice/vse-oljkice/vse-oljkice.component
     YellowizeDirective,
     ParSvetiDuhComponent,
     DomaComponent,
-    VseOljkiceComponent
+    VseOljkiceComponent,
+    VVazahComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +81,9 @@ import { VseOljkiceComponent } from './oljkice/vse-oljkice/vse-oljkice.component
     NbOptionModule,
     NbRadioModule
   ],
-  providers: [BelezkaService],
+  providers: [BelezkaService, { provide: LogService, useClass: UpdatedLogService }, {
+    provide: UpdatedLogService, useClass: UpdatedLogService
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

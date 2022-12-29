@@ -6,7 +6,7 @@ import { OljkiceService } from '../oljkice/oljkice.service';
   selector: 'app-par-sveti-duh',
   templateUrl: './par-sveti-duh.component.html',
   styleUrls: ['./par-sveti-duh.component.scss'],
-  providers: [OljkiceService, LogService]
+  providers: [OljkiceService]
 })
 export class ParSvetiDuhComponent implements OnInit {
   message: string = ""

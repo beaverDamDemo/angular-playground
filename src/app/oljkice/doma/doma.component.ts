@@ -6,7 +6,7 @@ import { OljkiceService } from '../oljkice/oljkice.service';
   selector: 'app-doma',
   templateUrl: './doma.component.html',
   styleUrls: ['./doma.component.scss'],
-  providers: [OljkiceService, LogService]
+  providers: [OljkiceService]
 })
 export class DomaComponent implements OnInit {
   oljkice: Object[] = []
