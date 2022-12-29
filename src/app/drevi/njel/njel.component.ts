@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggerDefaultService } from '../services/logger-default.service';
 
 @Component({
   selector: 'app-njel',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NjelComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loggerDefault: LoggerDefaultService) { }
 
   ngOnInit(): void {
+    this.loggerDefault.log("Njel")
   }
 
 }
