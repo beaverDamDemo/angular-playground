@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { DreviRoutingModule } from './drevi-routing.module';
 import { KacijaComponent } from './kacija/kacija.component';
 import { NjelComponent } from './njel/njel.component';
@@ -9,7 +8,6 @@ import { LoggerDefaultService } from './services/logger-default.service';
 import { LoggerBlueService } from './services/logger-blue.service';
 import { APIKEY_we_will_use_this_to_pass_value } from './value';
 import { NbMenuItem, NbMenuModule } from '@nebular/theme';
-import { YellowizeDirective } from '../directives/yellowize.directive';
 
 
 @NgModule({

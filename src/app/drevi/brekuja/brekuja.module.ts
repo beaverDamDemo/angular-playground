@@ -4,8 +4,6 @@ import { BrekujaComponent } from './brekuja.component';
 import { DreviModule } from '../drevi.module';
 import { PaneDirective } from './pane.directive';
 
-
-
 @NgModule({
   declarations: [
     BrekujaComponent,
