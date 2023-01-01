@@ -33,6 +33,7 @@ import { VseOljkiceComponent } from './oljkice/vse-oljkice/vse-oljkice.component
 import { LogService } from './oljkice/oljkice/log.service';
 import { UpdatedLogService } from './oljkice/oljkice/updated-log.service';
 import { VVazahComponent } from './oljkice/v-vazah/v-vazah.component';
+import { MyassistantComponent } from './myassistant/myassistant.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { VVazahComponent } from './oljkice/v-vazah/v-vazah.component';
     ParSvetiDuhComponent,
     DomaComponent,
     VseOljkiceComponent,
-    VVazahComponent
+    VVazahComponent,
+    MyassistantComponent
   ],
   imports: [
     BrowserModule,

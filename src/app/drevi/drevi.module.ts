@@ -9,13 +9,15 @@ import { LoggerDefaultService } from './services/logger-default.service';
 import { LoggerBlueService } from './services/logger-blue.service';
 import { APIKEY_we_will_use_this_to_pass_value } from './value';
 import { NbMenuItem, NbMenuModule } from '@nebular/theme';
+import { YellowizeDirective } from '../directives/yellowize.directive';
 
 
 @NgModule({
   declarations: [
     KacijaComponent,
     NjelComponent,
-    DreviComponent
+    DreviComponent,
+
   ],
   imports: [
     CommonModule,
@@ -30,6 +32,8 @@ import { NbMenuItem, NbMenuModule } from '@nebular/theme';
     {
       provide: APIKEY_we_will_use_this_to_pass_value, useValue: { apikey: '123456' }
     }
-  ]
+  ],
+  bootstrap: [],
+  entryComponents: []
 })
 export class DreviModule { }

@@ -50,6 +50,10 @@ const routes: Routes = [
   {
     path: 'oljkice',
     loadChildren: () => import('./oljkice/oljkice/oljkice.module').then(module => module.OljkiceModule)
+  },
+  {
+    path: 'myassistant',
+    loadChildren: () => import('./myassistant/myassistant.module').then(module => module.MyassistantModule)
   }
 ];
 
