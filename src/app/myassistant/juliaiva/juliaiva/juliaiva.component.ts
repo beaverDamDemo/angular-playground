@@ -23,6 +23,17 @@ export class JuliaivaComponent implements OnInit {
     cartelletta['base'] = 'base';
     console.log('⚛ ~ cartelletta:', cartelletta);
     const colors = ['red', 'blue', 'green', 'orange', 'purple', 'pink'];
+    enum barve {
+      rdeca,
+      plava,
+      zelena,
+      oranzna,
+      viola,
+      roza,
+    }
+    const amb: barve = barve.viola;
+    console.log('⚛ ~ amb:', amb);
+
     colors[2] = 'kramatorsk';
     console.log('⚛ ~ colors:', colors);
 
