@@ -41,5 +41,20 @@ export class JuliaivaComponent implements OnInit {
       drivetrain: 'rear',
       valvetrain: 'sohc',
     };
+
+    const mubarak = function (name: string): string {
+      return `hello ${name}`;
+    };
+    const ruby = (name: string): string => {
+      return `hello ${name}`;
+    };
+    const takobitrebanareditvprasaj: (name: string) => string = function (
+      name: string
+    ): string {
+      return `hello ${name}`;
+    };
+    const sayHello: (name: string) => string = function (name: string): string {
+      return 'Hello, ' + name;
+    };
   }
 }
