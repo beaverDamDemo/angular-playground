@@ -4,7 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbCardModule, NbButtonModule, NbMenuModule, NbIconModule, NbSpinnerModule, NbToastrModule, NbToastrService, NbInputModule, NbSelectModule, NbOptionModule, NbRadioModule } from '@nebular/theme';
+import {
+  NbThemeModule,
+  NbLayoutModule,
+  NbCardModule,
+  NbButtonModule,
+  NbMenuModule,
+  NbIconModule,
+  NbSpinnerModule,
+  NbToastrModule,
+  NbToastrService,
+  NbInputModule,
+  NbSelectModule,
+  NbOptionModule,
+  NbRadioModule,
+} from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { DraggableComponent } from './pages/draggable/draggable.component';
 import { SingleCarDisplayComponent } from './pages/single-car-display/single-car-display.component';
@@ -14,7 +28,7 @@ import { CarsFromApiComponent } from './pages/cars-from-api/cars-from-api.compon
 import { AboutComponent } from './pages/about/about.component';
 import { ZemljevidComponent } from './pages/zemljevid/zemljevid.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LeafletModule } from "@asymmetrik/ngx-leaflet";
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
 import { DodajAvtoComponent } from './pages/about/dodaj-avto/dodaj-avto.component';
 import { BelezkaService } from './services/belezka.service';
@@ -34,7 +48,7 @@ import { LogService } from './oljkice/oljkice/log.service';
 import { UpdatedLogService } from './oljkice/oljkice/updated-log.service';
 import { VVazahComponent } from './oljkice/v-vazah/v-vazah.component';
 import { MyassistantComponent } from './myassistant/myassistant.component';
-
+import { JuliaivaComponent } from './myassistant/juliaiva/juliaiva/juliaiva.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +73,8 @@ import { MyassistantComponent } from './myassistant/myassistant.component';
     DomaComponent,
     VseOljkiceComponent,
     VVazahComponent,
-    MyassistantComponent
+    MyassistantComponent,
+    JuliaivaComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,9 +99,14 @@ import { MyassistantComponent } from './myassistant/myassistant.component';
     NbRadioModule,
     NbMenuModule.forRoot(),
   ],
-  providers: [BelezkaService, { provide: LogService, useClass: UpdatedLogService }, {
-    provide: UpdatedLogService, useClass: UpdatedLogService
-  }],
-  bootstrap: [AppComponent]
+  providers: [
+    BelezkaService,
+    { provide: LogService, useClass: UpdatedLogService },
+    {
+      provide: UpdatedLogService,
+      useClass: UpdatedLogService,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

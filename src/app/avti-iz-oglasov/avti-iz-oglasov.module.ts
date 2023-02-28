@@ -9,10 +9,9 @@ import {
   NbIconModule,
   NbLayoutModule,
 } from '@nebular/theme';
-import { JuliaivaComponent } from '../myassistant/juliaiva/juliaiva/juliaiva.component';
 
 @NgModule({
-  declarations: [SpisekComponent, JuliaivaComponent],
+  declarations: [SpisekComponent],
   imports: [
     CommonModule,
     AvtiIzOglasovRoutingModule,
