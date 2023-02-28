@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+type drivetrains = 'front' | 'rear' | '4wd' | 'awd';
+type valvetrains = 'sohc' | 'dohc';
+interface car {
+  drivetrain: drivetrains;
+  valvetrain: valvetrains;
+}
 @Component({
   selector: 'app-juliaiva',
   template: ` <p>juliaiva works!</p> `,
@@ -19,5 +25,10 @@ export class JuliaivaComponent implements OnInit {
     const colors = ['red', 'blue', 'green', 'orange', 'purple', 'pink'];
     colors[2] = 'kramatorsk';
     console.log('⚛ ~ colors:', colors);
+
+    const p_911: car = {
+      drivetrain: 'rear',
+      valvetrain: 'sohc',
+    };
   }
 }
