@@ -49,7 +49,6 @@ import { UpdatedLogService } from './oljkice/oljkice/updated-log.service';
 import { VVazahComponent } from './oljkice/v-vazah/v-vazah.component';
 import { MyassistantComponent } from './myassistant/myassistant.component';
 import { JuliaivaComponent } from './myassistant/juliaiva/juliaiva/juliaiva.component';
-import { GrindersModule } from './pages/grinders/grinders.module';
 import { ChainsawModule } from './pages/chainsaw/chainsaw.module';
 @NgModule({
   declarations: [
@@ -100,7 +99,6 @@ import { ChainsawModule } from './pages/chainsaw/chainsaw.module';
     NbOptionModule,
     NbRadioModule,
     NbMenuModule.forRoot(),
-    GrindersModule,
   ],
   providers: [
     BelezkaService,
