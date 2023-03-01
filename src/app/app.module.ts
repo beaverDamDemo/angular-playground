@@ -53,6 +53,7 @@ import { ChainsawModule } from './pages/chainsaw/chainsaw.module';
 import { HoferComponent } from './pages/grinders/electric-grinders/hofer/hofer.component';
 import { AuthenticationModule } from './pages/tutorial/authentication/authentication.module';
 import { LetalaModule } from './pages/letala/letala/letala.module';
+import { TankiModule } from './pages/tanki/tanki/tanki.module';
 
 @NgModule({
   declarations: [
@@ -106,6 +107,7 @@ import { LetalaModule } from './pages/letala/letala/letala.module';
     NbMenuModule.forRoot(),
     AuthenticationModule,
     LetalaModule,
+    TankiModule,
   ],
   providers: [
     BelezkaService,

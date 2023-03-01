@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeavyTankComponent } from './heavy-tank/heavy-tank.component';
-import { TankiComponent } from './tanki/tanki.component';
 
 const routes: Routes = [
   {
@@ -10,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'tanki',
-    component: TankiComponent,
+    component: HeavyTankComponent,
   },
 ];
 
