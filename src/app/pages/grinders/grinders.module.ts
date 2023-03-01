@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ElectricGrindersModule } from './electric-grinders/electric-grinders.module';
-import { GrindersComponent } from './grinders.component';
-import { LidlComponent } from './electric-grinders/lidl/lidl.component';
+import { TistiDragComponent } from './electric-grinders/lidl/tisti-drag/tisti-drag.component';
 
 @NgModule({
-  declarations: [LidlComponent],
+  declarations: [TistiDragComponent],
   imports: [CommonModule, ElectricGrindersModule],
-  exports: [LidlComponent],
+  exports: [],
 })
 export class GrindersModule {}
