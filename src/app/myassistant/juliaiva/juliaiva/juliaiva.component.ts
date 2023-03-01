@@ -140,5 +140,7 @@ export class JuliaivaComponent implements OnInit {
       return total;
     }
     allAreas(new Square(), new Circle());
+    let krogec = new Square();
+    let k = krogec?.area();
   }
 }
