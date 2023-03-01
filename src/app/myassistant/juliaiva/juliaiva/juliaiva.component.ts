@@ -91,7 +91,20 @@ export class JuliaivaComponent implements OnInit {
     }
     console.log(greetPeople_2('hej', 'John', 'Jane', 'Jonathan', 'Mary'));
 
+    const greetPeople_3 = (greeting: string, ...names: string[]): string =>
+      greeting + ', ' + names.join(' and ') + '!';
+    console.log(greetPeople_3('hej', 'John', 'Jane', 'Jonathan', 'Mary'));
+
     const animals = ['dog', 'cat', 'pig', 'fish', 'bird'];
     console.log('⚛ ~ ...animals:', ...animals);
+
+    const beasts = [...animals, 'cat', 'pig', 'fish', 'bird'];
+    console.log('⚛ ~ beasts:', beasts);
+
+    const p_911_t = {
+      ...p_911,
+      price: 275000,
+    };
+    console.log('⚛ ~ p_911_t:', p_911_t);
   }
 }
