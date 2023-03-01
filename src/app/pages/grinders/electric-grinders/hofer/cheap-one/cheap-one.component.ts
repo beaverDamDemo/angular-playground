@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-hofer',
-  template: ` <p>hofer works!</p> `,
+  selector: 'app-cheap-one',
+  template: ` <p>cheap-one works!</p> `,
   styles: [],
 })
-export class HoferComponent implements OnInit {
+export class CheapOneComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
