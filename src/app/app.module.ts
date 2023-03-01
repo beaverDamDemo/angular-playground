@@ -51,6 +51,10 @@ import { MyassistantComponent } from './myassistant/myassistant.component';
 import { JuliaivaComponent } from './myassistant/juliaiva/juliaiva/juliaiva.component';
 import { ChainsawModule } from './pages/chainsaw/chainsaw.module';
 import { HoferComponent } from './pages/grinders/electric-grinders/hofer/hofer.component';
+import { HelpConponentComponent } from './pages/tutorial/help-conponent/help-conponent.component';
+import { LoginComponentComponent } from './pages/tutorial/login-component/login-component.component';
+import { RegisterComponentComponent } from './pages/tutorial/register-component/register-component.component';
+import { AuthenticationModule } from './pages/tutorial/authentication/authentication.module';
 
 @NgModule({
   declarations: [
@@ -102,6 +106,7 @@ import { HoferComponent } from './pages/grinders/electric-grinders/hofer/hofer.c
     NbOptionModule,
     NbRadioModule,
     NbMenuModule.forRoot(),
+    AuthenticationModule,
   ],
   providers: [
     BelezkaService,
