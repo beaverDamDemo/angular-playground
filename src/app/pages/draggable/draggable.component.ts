@@ -3,6 +3,19 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import gsap from 'gsap';
 import Draggable from 'gsap/Draggable';
 
+declare type ClassDecorator = <TFunction extends Function>(
+  Target: TFunction
+) => TFunction | void;
+function Banana(target: Function): void {
+  target.prototype.banana = function (): void {
+    console.log('banana');
+  };
+}
+@Banana
+class FruitBasket {}
+const basket: any = new FruitBasket();
+basket.banana();
+
 @Component({
   selector: 'app-draggable',
   templateUrl: './draggable.component.html',
