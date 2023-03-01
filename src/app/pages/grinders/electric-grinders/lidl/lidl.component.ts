@@ -3,18 +3,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-lidl',
   template: `
-    <p>
-      lidl works!
-    </p>
+    <p>lidl works!</p>
+    <app-tisti-drag></app-tisti-drag>
   `,
-  styles: [
-  ]
+  styles: [],
 })
 export class LidlComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
