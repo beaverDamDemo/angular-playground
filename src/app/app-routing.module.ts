@@ -43,6 +43,11 @@ const routes: Routes = [
     component: ChainsawComponent,
   },
   {
+    path: 'pages/tanki',
+    loadChildren: () =>
+      import('./pages/tanki/tanki.module').then((module) => module.TankiModule),
+  },
+  {
     path: 'drevi',
     loadChildren: () =>
       import('./drevi/drevi.module').then((module) => module.DreviModule),
