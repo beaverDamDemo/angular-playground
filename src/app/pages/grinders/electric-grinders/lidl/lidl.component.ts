@@ -2,10 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-lidl',
-  template: `
-    <p>lidl works!</p>
-    <app-tisti-drag></app-tisti-drag>
-  `,
+  template: ` <p>lidl works!</p> `,
   styles: [],
 })
 export class LidlComponent implements OnInit {

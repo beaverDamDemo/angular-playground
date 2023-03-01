@@ -5,7 +5,8 @@ import { CheapOneComponent } from './hofer/cheap-one/cheap-one.component';
 import { TistiDragComponent } from './lidl/tisti-drag/tisti-drag.component';
 
 @NgModule({
-  declarations: [LidlComponent, TistiDragComponent],
+  declarations: [TistiDragComponent],
   imports: [CommonModule],
+  exports: [],
 })
 export class ElectricGrindersModule {}
