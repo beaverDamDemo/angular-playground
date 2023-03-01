@@ -5,6 +5,7 @@ type valvetrains = 'sohc' | 'dohc';
 interface car {
   drivetrain: drivetrains;
   valvetrain: valvetrains;
+  chassis?: string;
 }
 class truck implements car {
   drivetrain: drivetrains;
