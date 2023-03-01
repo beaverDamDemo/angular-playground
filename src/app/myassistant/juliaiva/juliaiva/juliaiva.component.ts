@@ -106,5 +106,39 @@ export class JuliaivaComponent implements OnInit {
       price: 275000,
     };
     console.log('⚛ ~ p_911_t:', p_911_t);
+
+    function metoda(name: any): any {
+      return name;
+    }
+    console.log(metoda(1000));
+
+    interface Shape {
+      area(): number;
+      circumference(): number;
+    }
+    class Square implements Shape {
+      area() {
+        return 1;
+      }
+      circumference(): number {
+        return 4;
+      }
+    }
+    class Circle implements Shape {
+      area() {
+        return 3.14;
+      }
+      circumference(): number {
+        return 6.28;
+      }
+    }
+    function allAreas<T extends Shape>(...args: T[]): number {
+      let total = 0;
+      args.forEach((x) => {
+        total += x.area();
+      });
+      return total;
+    }
+    allAreas(new Square(), new Circle());
   }
 }
