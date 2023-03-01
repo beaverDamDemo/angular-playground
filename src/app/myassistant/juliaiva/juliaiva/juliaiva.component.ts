@@ -12,6 +12,8 @@ interface car {
   styles: [],
 })
 export class JuliaivaComponent implements OnInit {
+  tanjina: string = 'juliaiva';
+  fox: string = 'fox';
   constructor() {}
 
   ngOnInit(): void {
@@ -43,18 +45,53 @@ export class JuliaivaComponent implements OnInit {
     };
 
     const mubarak = function (name: string): string {
+      // ta ima svoj this
       return `hello ${name}`;
     };
-    const ruby = (name: string): string => {
-      return `hello ${name}`;
+    console.log('⚛ ~ mubarak:', mubarak('tanja'));
+
+    const ruby = (name: string, surname: string = 'lovely'): string => {
+      // ta ima this od parenta, nima svojega
+      return `hello ${name} ${this.tanjina} ${surname}`;
     };
+    console.log('⚛ ~ ruby:', ruby('tanja'));
+
     const takobitrebanareditvprasaj: (name: string) => string = function (
       name: string
     ): string {
+      // ta ima svoj this
       return `hello ${name}`;
     };
+    console.log(
+      '⚛ ~ takobitrebanareditvprasaj:',
+      takobitrebanareditvprasaj('tanja')
+    );
+
     const sayHello: (name: string) => string = function (name: string): string {
-      return 'Hello, ' + name;
+      // ta ima svoj this
+      return `hello ${name}`;
     };
+    console.log('⚛ ~ sayHello:', sayHello('tanja'));
+
+    function greeter(fn: (a: string) => void) {
+      fn('Hello, World');
+    }
+    function log(l) {
+      console.log(l);
+    }
+    greeter(log);
+
+    function greetPeople(greeting: string, names: string[]): string {
+      return greeting + ', ' + names.join(' and ') + '!';
+    }
+    console.log(greetPeople('hej', ['John', 'Jane', 'Jonathan', 'Mary']));
+
+    function greetPeople_2(greeting: string, ...names: string[]): string {
+      return greeting + ', ' + names.join(' and ') + '!';
+    }
+    console.log(greetPeople_2('hej', 'John', 'Jane', 'Jonathan', 'Mary'));
+
+    const animals = ['dog', 'cat', 'pig', 'fish', 'bird'];
+    console.log('⚛ ~ ...animals:', ...animals);
   }
 }
