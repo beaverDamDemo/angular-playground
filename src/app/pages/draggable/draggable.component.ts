@@ -12,7 +12,32 @@ export class DraggableComponent implements OnInit, AfterViewInit {
   public draggable: any = undefined;
 
   constructor() {}
-  ngAfterViewInit(): void {
+  public hitTest(item: any, dropArea: any) {
+    const itemEl = document.querySelectorAll(item).item(0);
+    const dropAreaEl = document.querySelectorAll(dropArea).item(0);
+
+    if (
+      Math.pow(
+        itemEl.getBoundingClientRect().left -
+          dropAreaEl.getBoundingClientRect().left,
+        2
+      ) < 300
+    ) {
+      if (
+        Math.pow(
+          itemEl.getBoundingClientRect().top -
+            dropAreaEl.getBoundingClientRect().top,
+          2
+        ) < 300
+      ) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+  ngOnInit(): void {
+    gsap.registerPlugin(Draggable);
     const items = ['#item_0', '#item_1', '#item_2'];
     for (let i = 0; i < items.length; i++) {
       this.draggable = Draggable.create(items[i], {
@@ -41,31 +66,5 @@ export class DraggableComponent implements OnInit, AfterViewInit {
       });
     }
   }
-  public hitTest(item: any, dropArea: any) {
-    const itemEl = document.querySelectorAll(item).item(0);
-    const dropAreaEl = document.querySelectorAll(dropArea).item(0);
-
-    if (
-      Math.pow(
-        itemEl.getBoundingClientRect().left -
-          dropAreaEl.getBoundingClientRect().left,
-        2
-      ) < 300
-    ) {
-      if (
-        Math.pow(
-          itemEl.getBoundingClientRect().top -
-            dropAreaEl.getBoundingClientRect().top,
-          2
-        ) < 300
-      ) {
-        return true;
-      }
-    }
-
-    return false;
-  }
-  ngOnInit(): void {
-    gsap.registerPlugin(Draggable);
-  }
+  ngAfterViewInit(): void {}
 }
