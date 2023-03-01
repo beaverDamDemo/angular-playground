@@ -50,6 +50,8 @@ import { VVazahComponent } from './oljkice/v-vazah/v-vazah.component';
 import { MyassistantComponent } from './myassistant/myassistant.component';
 import { JuliaivaComponent } from './myassistant/juliaiva/juliaiva/juliaiva.component';
 import { ChainsawModule } from './pages/chainsaw/chainsaw.module';
+import { HoferComponent } from './pages/grinders/electric-grinders/hofer/hofer.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,6 +78,7 @@ import { ChainsawModule } from './pages/chainsaw/chainsaw.module';
     VVazahComponent,
     MyassistantComponent,
     JuliaivaComponent,
+    HoferComponent,
   ],
   imports: [
     BrowserModule,
