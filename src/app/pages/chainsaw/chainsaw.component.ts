@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <p>chainsaw works!</p>
     <div>
       <app-verige></app-verige>
+      <app-hofer></app-hofer>
     </div>
   `,
   styles: [],

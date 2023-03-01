@@ -6,6 +6,6 @@ import { VerigeComponent } from '../verige/verige.component';
 
 @NgModule({
   declarations: [ChainsawComponent, VerigeComponent],
-  imports: [CommonModule, GrindersModule],
+  imports: [CommonModule],
 })
 export class ChainsawModule {}
