@@ -6,6 +6,10 @@ interface car {
   drivetrain: drivetrains;
   valvetrain: valvetrains;
 }
+class truck implements car {
+  drivetrain: drivetrains;
+  valvetrain: valvetrains;
+}
 @Component({
   selector: 'app-juliaiva',
   template: ` <p>juliaiva works!</p> `,
