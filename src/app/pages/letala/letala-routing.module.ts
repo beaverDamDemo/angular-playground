@@ -14,6 +14,10 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'fighter/:id',
+    component: FighterComponent,
+  },
+  {
     path: 'fighter',
     component: FighterComponent,
   },
