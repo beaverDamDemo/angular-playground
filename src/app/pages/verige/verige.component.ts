@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
     <button fullWidth="" nbButton status="success">button</button>
     <div class="parent">
       <div class="left">
-        <h5>left part</h5>
+        <h5>verige</h5>
         <ul>
           <li>husky</li>
           <li>rgchain</li>
@@ -17,20 +17,29 @@ import { Component, OnInit } from '@angular/core';
         </ul>
       </div>
       <div class="right">
-        <h5>right part</h5>
+        <h5>opis</h5>
       </div>
     </div>
   `,
   styles: [
     `
+      ul li {
+        text-decoration: none;
+        list-style-type: none;
+      }
       div.parent {
-        background: lightblue;
+        background: beige;
+        display: flex;
+        width: 100%;
+        padding: 0.25rem;
       }
       div.left {
         background: slategrey;
+        width: 40%;
       }
       div.right {
         background: azure;
+        flex-grow: 1;
       }
     `,
   ],
