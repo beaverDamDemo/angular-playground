@@ -55,6 +55,7 @@ import { AuthenticationModule } from './pages/tutorial/authentication/authentica
 import { TankiModule } from './pages/tanki/tanki/tanki.module';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { HomeComponent } from './pages/home/home.component';
+import { VerigeDetailComponent } from './pages/verige-detail/verige-detail.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import { HomeComponent } from './pages/home/home.component';
     HoferComponent,
     PageNotFoundComponent,
     HomeComponent,
+    VerigeDetailComponent,
   ],
   imports: [
     BrowserModule,
