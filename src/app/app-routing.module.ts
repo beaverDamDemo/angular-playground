@@ -5,6 +5,7 @@ import { CarsFromApiComponent } from './pages/cars-from-api/cars-from-api.compon
 import { ChainsawComponent } from './pages/chainsaw/chainsaw.component';
 import { DraggableComponent } from './pages/draggable/draggable.component';
 import { KamjonComponent } from './pages/kamjon/kamjon.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { SingleCarDisplayComponent } from './pages/single-car-display/single-car-display.component';
 import { WhoresComponent } from './pages/whores/whores.component';
 import { ZemljevidComponent } from './pages/zemljevid/zemljevid.component';
@@ -74,6 +75,10 @@ const routes: Routes = [
       import('./myassistant/myassistant.module').then(
         (module) => module.MyassistantModule
       ),
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
   },
 ];
 
