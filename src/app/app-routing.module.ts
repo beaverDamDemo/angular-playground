@@ -46,7 +46,8 @@ const routes: Routes = [
   },
   {
     path: 'pages/chainsaw',
-    component: ChainsawComponent,
+    loadChildren: () =>
+      import('./pages/chainsaw/chainsaw.module').then((m) => m.ChainsawModule),
   },
   {
     path: 'pages/tanki',
