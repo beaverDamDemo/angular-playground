@@ -10,7 +10,11 @@ import {
   selector: 'app-heavy-tank',
   template: `
     <div [innerText]="labelcek"></div>
-    <div #subheader (click)="onSubheaderClick()">Subheader</div>
+    <div #subheader>
+      <button nbButton status="danger" (click)="onSubheaderClick()">
+        click
+      </button>
+    </div>
     <div style="background: red">
       •OnInit: This is called when a component is initialized
     </div>
