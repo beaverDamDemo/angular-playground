@@ -1,11 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-fighter',
   template: `
     <p>fighter works!</p>
     <h3>{{ routeParamId }}</h3>
+
+    <a
+      [attr.href]="
+        'https://www.google.com/search?q=war thunder ' + routeParamId
+      "
+      ><button nbButton status="success">{{ routeParamId }}</button></a
+    >
+
     <table
       class="mw-collapsible"
       style="border: 1px solid #B0BEC5; background: #eeeeee;"
