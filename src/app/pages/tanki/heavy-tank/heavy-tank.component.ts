@@ -25,6 +25,7 @@ import {
       •AfterViewInit: This is called when Angular initializes the view of the
       current component and its child components
     </div>
+    <app-ussr></app-ussr>
   `,
   styles: [],
 })
