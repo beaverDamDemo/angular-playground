@@ -55,6 +55,7 @@ import { AuthenticationModule } from './pages/tutorial/authentication/authentica
 import { LetalaModule } from './pages/letala/letala/letala.module';
 import { TankiModule } from './pages/tanki/tanki/tanki.module';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +85,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     JuliaivaComponent,
     HoferComponent,
     PageNotFoundComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

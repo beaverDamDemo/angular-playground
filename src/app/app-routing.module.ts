@@ -4,6 +4,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { CarsFromApiComponent } from './pages/cars-from-api/cars-from-api.component';
 import { ChainsawComponent } from './pages/chainsaw/chainsaw.component';
 import { DraggableComponent } from './pages/draggable/draggable.component';
+import { HomeComponent } from './pages/home/home.component';
 import { KamjonComponent } from './pages/kamjon/kamjon.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { SingleCarDisplayComponent } from './pages/single-car-display/single-car-display.component';
@@ -11,6 +12,10 @@ import { WhoresComponent } from './pages/whores/whores.component';
 import { ZemljevidComponent } from './pages/zemljevid/zemljevid.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+  },
   {
     path: 'pages/draggable',
     component: DraggableComponent,
