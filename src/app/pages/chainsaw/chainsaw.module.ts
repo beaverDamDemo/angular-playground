@@ -4,9 +4,11 @@ import { GrindersModule } from '../grinders/grinders.module';
 import { ChainsawComponent } from './chainsaw.component';
 import { VerigeComponent } from '../verige/verige.component';
 import { GrindersComponent } from '../grinders/grinders.component';
+import { ChainsawRoutingModule } from './chainsaw-routing.module';
+import { NbButtonModule } from '@nebular/theme';
 
 @NgModule({
   declarations: [ChainsawComponent, VerigeComponent, GrindersComponent],
-  imports: [CommonModule],
+  imports: [CommonModule, ChainsawRoutingModule, NbButtonModule],
 })
 export class ChainsawModule {}
