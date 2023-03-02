@@ -52,7 +52,6 @@ import { JuliaivaComponent } from './myassistant/juliaiva/juliaiva/juliaiva.comp
 import { ChainsawModule } from './pages/chainsaw/chainsaw.module';
 import { HoferComponent } from './pages/grinders/electric-grinders/hofer/hofer.component';
 import { AuthenticationModule } from './pages/tutorial/authentication/authentication.module';
-import { LetalaModule } from './pages/letala/letala/letala.module';
 import { TankiModule } from './pages/tanki/tanki/tanki.module';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -110,7 +109,6 @@ import { HomeComponent } from './pages/home/home.component';
     NbRadioModule,
     NbMenuModule.forRoot(),
     AuthenticationModule,
-    LetalaModule,
     TankiModule,
   ],
   providers: [

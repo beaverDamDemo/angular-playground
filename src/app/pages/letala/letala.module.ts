@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FighterComponent } from '../fighter/fighter.component';
+
+import { LetalaRoutingModule } from './letala-routing.module';
+import { FighterComponent } from './fighter/fighter.component';
 
 @NgModule({
   declarations: [FighterComponent],
-  imports: [CommonModule],
+  imports: [CommonModule, LetalaRoutingModule],
   exports: [FighterComponent],
 })
 export class LetalaModule {}

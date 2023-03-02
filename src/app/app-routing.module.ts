@@ -56,11 +56,6 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'drevi',
-    loadChildren: () =>
-      import('./drevi/drevi.module').then((module) => module.DreviModule),
-  },
-  {
     path: 'avti-iz-oglasov',
     loadChildren: () =>
       import('./avti-iz-oglasov/avti-iz-oglasov.module').then(
@@ -68,10 +63,15 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'oljkice',
+    path: 'drevi',
     loadChildren: () =>
-      import('./oljkice/oljkice/oljkice.module').then(
-        (module) => module.OljkiceModule
+      import('./drevi/drevi.module').then((module) => module.DreviModule),
+  },
+  {
+    path: 'pages/letala',
+    loadChildren: () =>
+      import('./pages/letala/letala.module').then(
+        (module) => module.LetalaModule
       ),
   },
   {
@@ -79,6 +79,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./myassistant/myassistant.module').then(
         (module) => module.MyassistantModule
+      ),
+  },
+  {
+    path: 'oljkice',
+    loadChildren: () =>
+      import('./oljkice/oljkice/oljkice.module').then(
+        (module) => module.OljkiceModule
       ),
   },
   {
