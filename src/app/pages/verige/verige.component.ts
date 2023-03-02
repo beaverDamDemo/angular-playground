@@ -9,11 +9,21 @@ import { Component, OnInit } from '@angular/core';
       <div class="left">
         <h5>verige</h5>
         <ul>
-          <li>husky</li>
-          <li>rgchain</li>
-          <li>low-profile</li>
-          <li>normal-profile</li>
-          <li>full-skip</li>
+          <li>
+            husky<span><button>-></button></span>
+          </li>
+          <li>
+            rgchain<span><button>-></button></span>
+          </li>
+          <li>
+            low-profile<span><button>-></button></span>
+          </li>
+          <li>
+            normal-profile<span><button>-></button></span>
+          </li>
+          <li>
+            full-skip<span><button>-></button></span>
+          </li>
         </ul>
       </div>
       <div class="right">
