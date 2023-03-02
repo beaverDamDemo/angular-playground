@@ -1,4 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  Component,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 
 @Component({
   selector: 'app-heavy-tank',
@@ -22,13 +28,19 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   `,
   styles: [],
 })
-export class HeavyTankComponent implements OnInit, OnDestroy {
+export class HeavyTankComponent implements OnInit, OnDestroy, OnChanges {
   labelcek: string = 'I am heavy tank';
   constructor() {}
 
   ngOnInit(): void {}
   onSubheaderClick() {
     console.log('⚛ ~ onSubheaderClick:');
+  }
+  ngOnChanges(changes: SimpleChanges): void {
+    const product = changes['name'];
+    const oldValue = product.previousValue;
+    const newValue = product.currentValue;
+    console.log('Product changed from ${oldValue} to ${newValue}');
   }
   ngOnDestroy(): void {
     console.log('to do in ngondestroy, Resetting timers and intervals');
