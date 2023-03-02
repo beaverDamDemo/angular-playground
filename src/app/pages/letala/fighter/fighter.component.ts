@@ -12,7 +12,9 @@ import { switchMap } from 'rxjs';
       [attr.href]="
         'https://www.google.com/search?q=war thunder ' + routeParamId
       "
-      ><button nbButton status="success">{{ routeParamId }}</button></a
+      ><button nbButton status="success">
+        {{ routeParamId }} on google
+      </button></a
     >
 
     <table
