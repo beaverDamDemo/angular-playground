@@ -4,18 +4,18 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-home',
   template: `
     <p>home works!</p>
-    <button nbButton status="warning">
-      <a routerLink="/pages/chainsaw">chainsaw</a>
-    </button>
-    <button nbButton status="danger">
-      <a routerLink="/pages/kamjon">kamjon</a>
-    </button>
-    <button nbButton status="primary">
-      <a routerLink="/pages/letala">letala</a>
-    </button>
-    <button nbButton status="info">
-      <a routerLink="/pages/tanki/heavy-tank">heavt-tank</a>
-    </button>
+    <a routerLink="/pages/chainsaw">
+      <button nbButton status="warning">chainsaw</button></a
+    >
+    <a routerLink="/pages/kamjon">
+      <button nbButton status="danger">kamjon</button></a
+    >
+    <a routerLink="/pages/letala">
+      <button nbButton status="primary">letala</button></a
+    >
+    <a routerLink="/pages/tanki/heavy-tank"
+      ><button nbButton status="info">heavt-tank</button></a
+    >
   `,
   styles: [
     'a {text-decoration: none; color: white;} button { margin: 0.1rem;}',
