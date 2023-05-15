@@ -1,6 +1,7 @@
 # AngularPiatnik
 
 This is a project just for testing various angular stuff.
+Previously named as angular-piatnik.
 
 ## Development server
 
