@@ -1,5 +1,4 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { NbMenuItem } from '@nebular/theme';
 
 @Component({
   selector: 'app-drevi',
@@ -8,7 +7,7 @@ import { NbMenuItem } from '@nebular/theme';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DreviComponent implements OnInit {
-  items: NbMenuItem[] = [
+  items: any[] = [
     {
       title: 'Brekuja',
       icon: 'person-outline',

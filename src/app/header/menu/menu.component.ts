@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ChangeDetectionStrategy } from '@angular/core';
-import { NbMenuItem } from '@nebular/theme';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +8,7 @@ import { NbMenuItem } from '@nebular/theme';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  items: NbMenuItem[] = [
+  items: any[] = [
     {
       title: 'Draggable',
       link: 'pages/draggable',

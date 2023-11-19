@@ -1,9 +1,9 @@
-<nb-layout>
-  <nb-layout-header>
+<div>
+  <div>
     <p>spisek works!</p>
-  </nb-layout-header>
-  <nb-layout-column>
-    <nb-card *ngFor="let a of avti">
+  </div>
+  <div>
+    <div *ngFor="let a of avti">
       <div *ngFor="let l of a | keyvalue">
         <span>{{ l["key"] }}:</span> <span>{{ l.value }}</span>
       </div>
@@ -16,12 +16,12 @@
           shape="semi-round"
           (click)="onFindSpecs()"
         >
-          <nb-icon icon="star"></nb-icon>
+          <span icon="star"></span>
           Find specs
         </button>
       </div>
-    </nb-card>
-  </nb-layout-column>
+    </div>
+  </div>
 
-  <nb-layout-footer> </nb-layout-footer>
-</nb-layout>
+  <div> </div>
+</div>

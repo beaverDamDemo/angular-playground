@@ -7,7 +7,6 @@ import { DreviComponent } from './drevi/drevi.component';
 import { LoggerDefaultService } from './services/logger-default.service';
 import { LoggerBlueService } from './services/logger-blue.service';
 import { APIKEY_we_will_use_this_to_pass_value } from './value';
-import { NbMenuItem, NbMenuModule } from '@nebular/theme';
 
 
 @NgModule({
@@ -19,7 +18,6 @@ import { NbMenuItem, NbMenuModule } from '@nebular/theme';
     imports: [
         CommonModule,
         DreviRoutingModule,
-        NbMenuModule
     ],
     providers: [
         {
