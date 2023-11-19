@@ -1,9 +1,8 @@
-<nb-card
-  [nbSpinner]="geojsonLoading"
+<div
   nbSpinnerSize="giant"
   nbSpinnerStatus="basic"
 >
-  <nb-card-body>
+  <div>
     <div id="map-container">
       <div
         leaflet
@@ -18,10 +17,6 @@
             nbButton
             size="medium"
             (click)="onLoadClick(l['buttonValue'])"
-            [nbSpinner]="geojsonLoading"
-            [status]="
-              selectedGeojson == l['buttonValue'] ? 'control' : 'primary'
-            "
             *ngFor="let l of loadGeojsons"
           >
             {{ l["buttonLabel"] }}
@@ -29,11 +24,11 @@
           <span class="flex-grow-1"></span>
         </div>
         <ng-template #dialog let-data let-ref="dialogRef">
-          <nb-card>
-            <nb-card-header
+          <div>
+            <div
               >Overview of Indicators for {{ data | titlecase }}
-            </nb-card-header>
-            <nb-card-body>
+            </div>
+            <div>
               <img
                 src="{{
                   'assets/images/overviewOfIndicators' +
@@ -43,11 +38,11 @@
                 }}"
                 alt=""
               />
-            </nb-card-body>
-            <nb-card-footer>
+            </div>
+            <div>
               <button nbButton (click)="ref.close()">Close</button>
-            </nb-card-footer>
-          </nb-card>
+            </div>
+          </div>
         </ng-template>
         <!-- <div id="grayscaleInput">
           <input
@@ -132,5 +127,5 @@
         </div>
       </form>
     </div>
-  </nb-card-body>
-</nb-card>
+  </div>
+</div>

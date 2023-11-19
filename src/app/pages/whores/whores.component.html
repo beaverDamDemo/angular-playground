@@ -8,7 +8,7 @@
     </tr>
   </table>
   <div style="display: flex; flex-wrap: wrap">
-    <nb-card
+    <div
       *ngFor="let w of whores"
       [className]="selectedWhore === w ? 'active' : ''"
       appYellowize
@@ -29,16 +29,16 @@
         <li>{{ w.haircut }}</li>
         <li style="list-style: none; line-height: 1.5rem">
           <button
-            nbButton
+
             (click)="onBookHer(w)"
-            [status]="selectedWhore === w ? 'success' : 'danger'"
+
           >
             Book her
           </button>
         </li>
       </ul>
-    </nb-card>
-    <nb-card>
+    </div>
+    <div>
       <h6>Template driven form</h6>
       <div>Simple</div>
       <form (ngSubmit)="onSubmit()" #newWhoreForm="ngForm">
@@ -109,7 +109,7 @@
           </div>
         </div>
         <div style="margin: 5px 0">
-          <nb-select
+          <!-- <nb-select
             placeholder="Boob size"
             name="Boob_size"
             [ngModel]="defaultBoobSize"
@@ -120,16 +120,16 @@
             <nb-option value="3">3</nb-option>
             <nb-option value="4">4</nb-option>
             <nb-option value="5">5</nb-option>
-          </nb-select>
+          </nb-select> -->
         </div>
         <div style="margin: 5px 0">
           <label for="">Haircut: </label>
           <span>
-            <nb-radio-group [(ngModel)]="selectedHaircut" name="haircut">
+            <!-- <nb-radio-group [(ngModel)]="selectedHaircut" name="haircut">
               <nb-radio *ngFor="let h of haircuts" value="{{ h['value'] }}">{{
                 h["value"]
               }}</nb-radio>
-            </nb-radio-group>
+            </nb-radio-group> -->
           </span>
         </div>
         <button
@@ -141,12 +141,12 @@
           submit
         </button>
       </form>
-    </nb-card>
-    <nb-card>
+    </div>
+    <div>
       <h6>Reactive form</h6>
       <div>Complex</div>
-    </nb-card>
-    <!-- <nb-card>
+    </div>
+    <!-- <div>
       <nb-layout>
         <nb-layout-column>
           <div
@@ -154,8 +154,8 @@
             role="main"
             style="display: flex; justify-content: center"
           >
-            <nb-card accent="info">
-              <nb-card-body>
+            <div accent="info">
+              <div-body>
                 <nb-form-field>
                   <form [formGroup]="myFormGroup" (ngSubmit)="onSubmit()">
                     <div>
@@ -260,8 +260,8 @@
                     ></textarea>
                   </form>
                 </nb-form-field>
-              </nb-card-body>
-              <nb-card-footer>
+              </div-body>
+              <div-footer>
                 <div style="display: flex">
                   <button
                     nbButton
@@ -278,8 +278,8 @@
                     RESET
                   </button>
                 </div>
-              </nb-card-footer>
-            </nb-card>
+              </div-footer>
+            </div>
           </div>
           <div style="display: flex">
             <span style="flex-grow: 1"></span>
@@ -296,6 +296,6 @@
           >
         </nb-layout-column>
       </nb-layout>
-    </nb-card> -->
+    </div> -->
   </div>
 </article>

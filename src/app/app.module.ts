@@ -4,22 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-  NbThemeModule,
-  NbLayoutModule,
-  NbCardModule,
-  NbButtonModule,
-  NbMenuModule,
-  NbIconModule,
-  NbSpinnerModule,
-  NbToastrModule,
-  NbToastrService,
-  NbInputModule,
-  NbSelectModule,
-  NbOptionModule,
-  NbRadioModule,
-} from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { DraggableComponent } from './pages/draggable/draggable.component';
 import { SingleCarDisplayComponent } from './pages/single-car-display/single-car-display.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -92,24 +76,10 @@ import { VerigeDetailComponent } from './pages/verige-detail/verige-detail.compo
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NbThemeModule.forRoot({ name: 'default' }),
-    NbLayoutModule,
-    NbEvaIconsModule,
     HttpClientModule,
-    NbCardModule,
-    NbButtonModule,
-    NbMenuModule.forRoot(),
-    NbIconModule,
-    NbSpinnerModule,
     FormsModule,
     ReactiveFormsModule,
     LeafletModule,
-    NbToastrModule.forRoot(),
-    NbInputModule,
-    NbSelectModule,
-    NbOptionModule,
-    NbRadioModule,
-    NbMenuModule.forRoot(),
     AuthenticationModule,
     TankiModule,
   ],

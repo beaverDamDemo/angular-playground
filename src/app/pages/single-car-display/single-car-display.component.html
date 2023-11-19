@@ -4,10 +4,10 @@
   <li>rabimo link do wikipedie za vsak avto?</li>
   <li>rabimo download large ikmage za vsak avto?</li>
 </ul>
-<nb-card>
-  <nb-card-body class="example-items-rows">
+<div>
+  <div class="example-items-rows">
     <button nbButton status="success" (click)="onCarPrevious()" [disabled]="carPrevDisabled">
-      <nb-icon icon="arrow-ios-back-outline"></nb-icon>
+      <span icon="arrow-ios-back-outline"></span>
     </button>
     <div class="spans-container">
       <span *ngFor="let f of [].constructor(36); let r = index">
@@ -24,11 +24,11 @@
       get All Cars
     </button>
     <button nbButton status="success" (click)="onCarNext()" [disabled]="carNextDisabled">
-      <nb-icon icon="arrow-ios-forward-outline"></nb-icon>
+      <span icon="arrow-ios-forward-outline"></span>
     </button>
-  </nb-card-body>
-</nb-card>
-<nb-card *ngIf="responseCar">
+  </div>
+</div>
+<div *ngIf="responseCar">
   {{ responseCar._id }}
   {{ responseCar._name }}
   {{ responseCar._cyl }}
@@ -72,4 +72,4 @@
     </div>
   </div>
   <!-- cardA-->
-</nb-card>
+</div>
