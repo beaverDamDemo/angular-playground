@@ -3,7 +3,7 @@ import * as L from "leaflet";
 import * as MapColors from "./map-colors-local";
 import { legendInverted, ratiosBetweenGrades } from "./results-map-settings";
 import { NbToastrService } from "@nebular/theme";
-import { FormControl, FormGroup } from "@angular/forms";
+import { UntypedFormControl, UntypedFormGroup } from "@angular/forms";
 
 @Component({
   selector: 'app-zemljevid',
@@ -31,13 +31,13 @@ export class ZemljevidComponent implements OnChanges {
   grayscale: number = 50;
   loadGeojsons: Object[] = [];
   maxKeyValues: Object = {};
-  newBrinkValues = new FormGroup({
-    legend_0: new FormControl(undefined),
-    legend_1: new FormControl(undefined),
-    legend_2: new FormControl(undefined),
-    legend_3: new FormControl(undefined),
-    legend_4: new FormControl(undefined),
-    legend_5: new FormControl(undefined),
+  newBrinkValues = new UntypedFormGroup({
+    legend_0: new UntypedFormControl(undefined),
+    legend_1: new UntypedFormControl(undefined),
+    legend_2: new UntypedFormControl(undefined),
+    legend_3: new UntypedFormControl(undefined),
+    legend_4: new UntypedFormControl(undefined),
+    legend_5: new UntypedFormControl(undefined),
   });
   newBrinkValuesApplied: boolean = false;
   radioButtonLayersControl: any;

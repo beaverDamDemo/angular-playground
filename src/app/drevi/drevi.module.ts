@@ -11,27 +11,25 @@ import { NbMenuItem, NbMenuModule } from '@nebular/theme';
 
 
 @NgModule({
-  declarations: [
-    KacijaComponent,
-    NjelComponent,
-    DreviComponent,
-
-  ],
-  imports: [
-    CommonModule,
-    DreviRoutingModule,
-    NbMenuModule
-  ],
-  providers: [
-    {
-      provide: LoggerDefaultService,
-      useClass: LoggerDefaultService
-    },
-    {
-      provide: APIKEY_we_will_use_this_to_pass_value, useValue: { apikey: '123456' }
-    }
-  ],
-  bootstrap: [],
-  entryComponents: []
+    declarations: [
+        KacijaComponent,
+        NjelComponent,
+        DreviComponent,
+    ],
+    imports: [
+        CommonModule,
+        DreviRoutingModule,
+        NbMenuModule
+    ],
+    providers: [
+        {
+            provide: LoggerDefaultService,
+            useClass: LoggerDefaultService
+        },
+        {
+            provide: APIKEY_we_will_use_this_to_pass_value, useValue: { apikey: '123456' }
+        }
+    ],
+    bootstrap: []
 })
 export class DreviModule { }

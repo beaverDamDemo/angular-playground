@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { BelezkaService } from 'src/app/services/belezka.service';
 
 @Component({
@@ -23,7 +23,7 @@ export class PrenosComponent implements OnInit {
     configuration: "manual unsynchronized"
   }]
 
-  myControl = new FormControl('default value', { updateOn: 'blur', initialValueIsDefault: false, })
+  myControl = new UntypedFormControl('default value', { updateOn: 'blur', initialValueIsDefault: false, })
   
   constructor(private belezkaService: BelezkaService) { }
 
