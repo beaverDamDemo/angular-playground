@@ -40,7 +40,9 @@ import { TankiModule } from './pages/tanki/tanki/tanki.module';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { HomeComponent } from './pages/home/home.component';
 import { VerigeDetailComponent } from './pages/verige-detail/verige-detail.component';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,6 +84,9 @@ import { VerigeDetailComponent } from './pages/verige-detail/verige-detail.compo
     LeafletModule,
     AuthenticationModule,
     TankiModule,
+    MatSlideToggleModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [
     BelezkaService,

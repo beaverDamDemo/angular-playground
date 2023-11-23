@@ -90,6 +90,11 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'cesen',
+    loadComponent: () =>
+      import('./cesen/cesen.component').then((m) => m.CesenComponent),
+  },
+  {
     path: '**',
     component: PageNotFoundComponent,
   },
