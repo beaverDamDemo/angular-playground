@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ChangeDetectionStrategy } from '@angular/core';
+interface nekaj {
+  title: string
+  link: string
+  icon: Object
+}
 
 @Component({
   selector: 'app-menu',
@@ -8,7 +13,7 @@ import { ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  items: any[] = [
+  items: nekaj[] = [
     {
       title: 'Draggable',
       link: 'pages/draggable',
@@ -65,6 +70,7 @@ export class MenuComponent implements OnInit {
       icon: { icon: 'sun', pack: 'eva' },
     },
   ];
+  single_item = this.items[2];
   constructor() { }
 
   ngOnInit(): void {
