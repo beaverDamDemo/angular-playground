@@ -7,7 +7,9 @@ import { DreviComponent } from './drevi/drevi.component';
 import { LoggerDefaultService } from './services/logger-default.service';
 import { LoggerBlueService } from './services/logger-blue.service';
 import { APIKEY_we_will_use_this_to_pass_value } from './value';
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCommonModule } from '@angular/material/core';
 
 @NgModule({
     declarations: [
@@ -18,6 +20,9 @@ import { APIKEY_we_will_use_this_to_pass_value } from './value';
     imports: [
         CommonModule,
         DreviRoutingModule,
+        MatIconModule,
+        MatButtonModule,
+        MatCommonModule
     ],
     providers: [
         {

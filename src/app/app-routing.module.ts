@@ -65,6 +65,7 @@ const routes: Routes = [
   },
   {
     path: 'drevi',
+    title: 'Drevi',
     loadChildren: () =>
       import('./drevi/drevi.module').then((module) => module.DreviModule),
   },

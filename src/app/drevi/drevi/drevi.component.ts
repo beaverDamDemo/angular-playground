@@ -1,13 +1,28 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  WritableSignal,
+  Signal,
+  signal,
+  computed,
+} from '@angular/core';
+import { ReactiveFormsModule, Validators } from '@angular/forms';
+import { BehaviorSubject } from 'rxjs';
 
+interface Drev {
+  title: string;
+  icon: string;
+  link: string;
+}
 @Component({
   selector: 'app-drevi',
   templateUrl: './drevi.component.html',
-  styleUrls: ['./drevi.component.scss'],
+  styleUrl: './drevi.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DreviComponent implements OnInit {
-  items: any[] = [
+  items: Drev[] = [
     {
       title: 'Brekuja',
       icon: 'person-outline',
@@ -20,16 +35,34 @@ export class DreviComponent implements OnInit {
     },
     {
       title: 'Njel',
-      icon: { icon: 'checkmark-outline', pack: 'eva' },
+      icon: 'checkmark-outline',
       link: 'njel',
     },
   ];
+  sumOfItems: number = 0;
+  signalcek = signal(0);
+  writableSingalcek: WritableSignal<number> = signal(0);
+  sumOfItemsPercentageComputed: Signal<number> = computed(() => {
+    return this.writableSingalcek() * 100;
+  });
+  sumOfItemsPercentageRxjs: BehaviorSubject<number> =
+    new BehaviorSubject<number>(0);
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  addItem() {
+    this.sumOfItems += 1;
+    this.signalcek.set(this.sumOfItems);
+    this.writableSingalcek.set(this.sumOfItems);
+    this.sumOfItemsPercentageRxjs.next(this.sumOfItems * 100);
   }
 
+  removeItem() {
+    this.sumOfItems -= 1;
+    this.signalcek.set(this.sumOfItems);
+    this.writableSingalcek.set(this.sumOfItems);
+    this.sumOfItemsPercentageRxjs.next(this.sumOfItems * 100);
+  }
 }
-
-

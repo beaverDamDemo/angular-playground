@@ -43,6 +43,7 @@ import { VerigeDetailComponent } from './pages/verige-detail/verige-detail.compo
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,6 +88,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatSlideToggleModule,
     MatIconModule,
     MatButtonModule,
+    MatGridListModule,
   ],
   providers: [
     BelezkaService,
