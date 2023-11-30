@@ -2,5 +2,6 @@ export interface Motor {
   name: string,
   displacement: number,
   configuration: string,
-  valvesPerCylinder: number
+  valvesPerCylinder: number,
+  unitaryDisplacement: number
 }

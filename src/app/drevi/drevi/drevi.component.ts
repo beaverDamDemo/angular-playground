@@ -40,7 +40,7 @@ export class DreviComponent implements OnInit {
     },
   ];
   sumOfItems: number = 0;
-  signalcek = signal(0);
+  signalcek: WritableSignal<number> = signal(0);
   writableSingalcek: WritableSignal<number> = signal(0);
   sumOfItemsPercentageComputed: Signal<number> = computed(() => {
     return this.writableSingalcek() * 100;
