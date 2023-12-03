@@ -1,22 +1,27 @@
-<span>{{ activeCount() }}</span>
-<button
-  mat-flat-button
-  color="warn"
-  [ngClass]="{ active: filterSignal() === filterEnum.all }"
->
-  <a href="/" (click)="changeFilter($event, filterEnum.all)">All</a>
-</button>
-<button
-  mat-flat-button
-  color="warn"
-  [ngClass]="{ active: filterSignal() === filterEnum.active }"
->
-  <a href="/" (click)="changeFilter($event, filterEnum.active)">Active</a>
-</button>
-<button
-  mat-flat-button
-  color="warn"
-  [ngClass]="{ active: filterSignal() === filterEnum.completed }"
->
-  <a href="/" (click)="changeFilter($event, filterEnum.completed)">Completed</a>
-</button>
+<div [ngClass]="{ hidden: noOpravkiClass() }">
+  <h4>underpinning part</h4>
+  <span>{{ activeCount() }}{{ itemsLeftText() }}</span>
+  <button
+    mat-flat-button
+    color="warn"
+    [ngClass]="{ active: filterSignal() === filterEnum.all }"
+  >
+    <a href="/" (click)="changeFilter($event, filterEnum.all)">All</a>
+  </button>
+  <button
+    mat-flat-button
+    color="warn"
+    [ngClass]="{ active: filterSignal() === filterEnum.active }"
+  >
+    <a href="/" (click)="changeFilter($event, filterEnum.active)">Active</a>
+  </button>
+  <button
+    mat-flat-button
+    color="warn"
+    [ngClass]="{ active: filterSignal() === filterEnum.completed }"
+  >
+    <a href="/" (click)="changeFilter($event, filterEnum.completed)"
+      >Completed</a
+    >
+  </button>
+</div>

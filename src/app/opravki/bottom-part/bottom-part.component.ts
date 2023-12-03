@@ -16,9 +16,16 @@ export class BottomPartComponent {
   filter = this.opravkiService.filterSignal();
   filterSignal = this.opravkiService.filterSignal;
   filterEnum = FilterEnum;
-  activeCount = computed(()=>{
-    return this.opravkiService.opravkiSignal().filter(f=> !f.isCompleted).length;
-  })
+  activeCount = computed(() => {
+    return this.opravkiService.opravkiSignal().filter((f) => !f.isCompleted)
+      .length;
+  });
+  noOpravkiClass = computed(() => {
+    return this.opravkiService.opravkiSignal().length === 0;
+  });
+  itemsLeftText = computed(() => {
+    return `item${this.activeCount() !== 1 ? 's' : ''} left`;
+  });
 
   changeFilter(event: Event, filterName: FilterEnum): void {
     event.preventDefault();

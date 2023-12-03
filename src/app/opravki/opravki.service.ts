@@ -6,11 +6,11 @@ import { FilterEnum } from './types/filter.enum';
 })
 export class OpravkiService {
   opravkiSignal = signal<Opravki[]>([
-    {
-      text: 'Akala badula',
-      id: '10009999ffefffef',
-      isCompleted: false,
-    },
+    // {
+    //   text: 'Akala badula',
+    //   id: '10009999ffefffef',
+    //   isCompleted: false,
+    // },
   ]);
   filterSignal = signal<FilterEnum>(FilterEnum.all);
 

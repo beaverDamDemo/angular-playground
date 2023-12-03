@@ -1,7 +1,7 @@
 <section>
   <h2>opravki works!</h2>
   <app-top-part></app-top-part>
-  @for (item of opravkiService.opravkiSignal(); track $index) {
+  @for (item of visibleOpravki(); track $index) {
   <ul>
     <li>
       <span style="display: inline-block; width: 170px">{{ item.id }}:</span
