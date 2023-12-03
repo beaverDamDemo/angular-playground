@@ -10,7 +10,12 @@ import { SingleOpravekComponent } from './single-opravek/single-opravek.componen
 @Component({
   selector: 'app-opravki',
   standalone: true,
-  imports: [CommonModule, TopPartComponent, BottomPartComponent, SingleOpravekComponent],
+  imports: [
+    CommonModule,
+    TopPartComponent,
+    BottomPartComponent,
+    SingleOpravekComponent,
+  ],
   templateUrl: './opravki.component.html',
   styleUrl: './opravki.component.scss',
 })
@@ -27,6 +32,12 @@ export class OpravkiComponent implements OnInit {
       return c;
     }
   });
+  
+  editingId: string | null = null;
 
   ngOnInit(): void {}
+
+  setEditingId(editingId: string | null): void {
+    this.editingId = editingId;
+  }
 }

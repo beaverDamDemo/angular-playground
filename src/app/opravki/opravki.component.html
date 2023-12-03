@@ -5,8 +5,9 @@
   <ul>
     <li>
       <app-single-opravek
-        [id]="item.id"
-        [text]="item.text"
+        [opravek]="item"
+        [isEditing]="editingId === item.id"
+        (setEditingId)="setEditingId($event)"
       ></app-single-opravek>
     </li>
   </ul>

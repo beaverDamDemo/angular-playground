@@ -1,1 +1,21 @@
-<span style="display: inline-block; width: 170px">{{ id }}:</span>{{ text }}
+<section [ngClass]="{ editing: isEditing }">
+  <span style="display: inline-block; width: 170px">{{ opravek.id }}:</span
+  ><span
+    style="display: inline-block; width: 170px"
+    (dblclick)="setOpravekInEditMode()"
+    >{{ opravek.text }}
+  </span>
+
+  @if (isEditing) {}
+  <ng-container *ngIf="isEditing">
+    <mat-form-field>
+      <input
+        type="text"
+        matInput
+        [value]="editingText"
+        (keyup)="changeText($event)"
+        (keyup.enter)="changeOpravek()"
+      />
+    </mat-form-field>
+  </ng-container>
+</section>
