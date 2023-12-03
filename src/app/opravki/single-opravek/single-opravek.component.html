@@ -1,14 +1,8 @@
 <section [ngClass]="{ editing: isEditing }">
-  <span style="display: inline-block; width: 170px">{{ opravek.id }}:</span
-  ><span
-    style="display: inline-block; width: 170px"
-    (dblclick)="setOpravekInEditMode()"
-    >{{ opravek.text }}
-  </span>
-
-  @if (isEditing) {}
-  <ng-container *ngIf="isEditing">
+  @if (isEditing) {
+  <ng-container>
     <mat-form-field>
+      <span style="display: inline-block; width: 170px">{{ opravek.id }}:</span>
       <input
         type="text"
         matInput
@@ -17,5 +11,14 @@
         (keyup.enter)="changeOpravek()"
       />
     </mat-form-field>
+    <button mat-flat-button color="warn" (click)="onDelete()">Delete</button>
   </ng-container>
+  } @else {
+  <span style="display: inline-block; width: 170px">{{ opravek.id }}:</span
+  ><span
+    style="display: inline-block; width: 170px"
+    (dblclick)="setOpravekInEditMode()"
+    >{{ opravek.text }}
+  </span>
+  }
 </section>

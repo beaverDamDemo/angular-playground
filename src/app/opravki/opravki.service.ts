@@ -33,4 +33,14 @@ export class OpravkiService {
   changeFilter(filterName: FilterEnum): void {
     this.filterSignal.set(filterName);
   }
+
+  changeOpravek(id: string, text: string): void {
+    this.opravkiSignal.update((o) =>
+      o.map((m) => (m.id === id ? { ...m, text } : m))
+    );
+  }
+
+  deleteOpravek(id: string): void {
+    this.opravkiSignal.update((vsi) => vsi.filter((eden) => eden.id !== id));
+  }
 }
