@@ -71,6 +71,7 @@ const routes: Routes = [
   },
   {
     path: 'pages/letala',
+    title: 'letala',
     loadChildren: () =>
       import('./pages/letala/letala.module').then(
         (module) => module.LetalaModule
@@ -78,6 +79,7 @@ const routes: Routes = [
   },
   {
     path: 'myassistant',
+    title: 'myassistant',
     loadChildren: () =>
       import('./myassistant/myassistant.module').then(
         (module) => module.MyassistantModule
@@ -85,6 +87,7 @@ const routes: Routes = [
   },
   {
     path: 'oljkice',
+    title: 'oljkice',
     loadChildren: () =>
       import('./oljkice/oljkice/oljkice.module').then(
         (module) => module.OljkiceModule
@@ -92,11 +95,13 @@ const routes: Routes = [
   },
   {
     path: 'cesen',
+    title: 'cesen',
     loadComponent: () =>
       import('./cesen/cesen.component').then((m) => m.CesenComponent),
   },
   {
     path: 'opravki',
+    title: 'Opravki',
     loadComponent: () =>
       import('./opravki/opravki.component').then((t) => t.OpravkiComponent),
   },

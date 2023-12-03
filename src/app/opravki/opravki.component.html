@@ -1,12 +1,13 @@
 <section>
   <h2>opravki works!</h2>
   <app-top-part></app-top-part>
-  @for (item of opravki; track $index) {
+  @for (item of opravkiService.opravkiSignal(); track $index) {
   <ul>
     <li>
-      <span style="display: inline-block; width: 100px;">{{ item.id }}</span
+      <span style="display: inline-block; width: 170px">{{ item.id }}:</span
       >{{ item.text }}
     </li>
   </ul>
   }
+  <app-bottom-part></app-bottom-part>
 </section>

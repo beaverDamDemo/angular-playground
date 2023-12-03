@@ -19,6 +19,7 @@ export class TopPartComponent {
     this.text = myText.value;
   }
   addOpravek() {
-    throw new Error('Method not implemented.');
+    this.opravkiService.addOpravek(this.text);
+    this.text = '';
   }
 }

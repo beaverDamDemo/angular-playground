@@ -1,0 +1,14 @@
+a {
+  text-decoration: none;
+}
+button {
+  margin: 2px;
+}
+.active {
+  filter: invert(0.75);
+}
+span {
+  display: inline-block;
+  width: 50px;
+  padding: 0 20px;
+}
