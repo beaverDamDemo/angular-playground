@@ -4,8 +4,10 @@
   @for (item of visibleOpravki(); track $index) {
   <ul>
     <li>
-      <span style="display: inline-block; width: 170px">{{ item.id }}:</span
-      >{{ item.text }}
+      <app-single-opravek
+        [id]="item.id"
+        [text]="item.text"
+      ></app-single-opravek>
     </li>
   </ul>
   }

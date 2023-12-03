@@ -5,11 +5,12 @@ import { OpravkiService } from './opravki.service';
 import { TopPartComponent } from './top-part/top-part.component';
 import { FilterEnum } from './types/filter.enum';
 import { BottomPartComponent } from './bottom-part/bottom-part.component';
+import { SingleOpravekComponent } from './single-opravek/single-opravek.component';
 
 @Component({
   selector: 'app-opravki',
   standalone: true,
-  imports: [CommonModule, TopPartComponent, BottomPartComponent],
+  imports: [CommonModule, TopPartComponent, BottomPartComponent, SingleOpravekComponent],
   templateUrl: './opravki.component.html',
   styleUrl: './opravki.component.scss',
 })
