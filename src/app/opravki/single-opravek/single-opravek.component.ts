@@ -1,4 +1,14 @@
-import { Component, Input, OnInit, Output, inject } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  Input,
+  OnChanges,
+  OnInit,
+  Output,
+  SimpleChanges,
+  ViewChild,
+  inject,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Opravki } from '../opravki';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -16,17 +26,29 @@ import { MatButtonModule } from '@angular/material/button';
     .editing {
       color: firebrick;
     }
+    .completed {
+      color: lime;
+    }
   `,
 })
-export class SingleOpravekComponent implements OnInit {
+export class SingleOpravekComponent implements OnInit, OnChanges {
   opravkiService = inject(OpravkiService);
   editingText: string = '';
   @Input({ required: true }) opravek!: Opravki;
   @Input({ required: true }) isEditing!: boolean;
   @Output() setEditingId: EventEmitter<string | null> = new EventEmitter();
+  @ViewChild('textInput') textInput?: ElementRef;
 
   ngOnInit(): void {
     this.editingText = this.opravek.text;
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if(changes['isEditing'].currentValue) {
+      setTimeout(()=>{
+        this.textInput?.nativeElement.focus();
+      }, 0)
+    }
   }
 
   changeOpravek() {
@@ -45,5 +67,9 @@ export class SingleOpravekComponent implements OnInit {
 
   onDelete() {
     this.opravkiService.deleteOpravek(this.opravek.id);
+  }
+
+  toggleOpravek() {
+    this.opravkiService.toggleOpravek(this.opravek.id);
   }
 }

@@ -43,4 +43,10 @@ export class OpravkiService {
   deleteOpravek(id: string): void {
     this.opravkiSignal.update((vsi) => vsi.filter((eden) => eden.id !== id));
   }
+
+  toggleOpravek(id: string): void {
+    this.opravkiSignal.update((o) =>
+      o.map((m) => (m.id === id ? { ...m, isCompleted: !m.isCompleted } : m))
+    );
+  }
 }

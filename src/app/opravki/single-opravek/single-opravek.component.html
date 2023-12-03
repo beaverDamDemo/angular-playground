@@ -1,10 +1,17 @@
-<section [ngClass]="{ editing: isEditing }">
+<section [ngClass]="{ editing: isEditing, completed: opravek.isCompleted}">
+  <input
+    class="toggle"
+    type="checkbox"
+    [checked]="opravek.isCompleted"
+    (change)="toggleOpravek()"
+  />
   @if (isEditing) {
   <ng-container>
     <mat-form-field>
       <span style="display: inline-block; width: 170px">{{ opravek.id }}:</span>
       <input
         type="text"
+        #textInput
         matInput
         [value]="editingText"
         (keyup)="changeText($event)"
