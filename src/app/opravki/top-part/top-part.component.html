@@ -1,0 +1,10 @@
+<p>top-part works!</p>
+<mat-form-field>
+  <input
+    type="text"
+    matInput
+    [value]="text"
+    (keyup)="changeText($event)"
+    (keyup.enter)="addOpravek()"
+  />
+</mat-form-field>

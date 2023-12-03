@@ -18,7 +18,16 @@
   }
 }
 
-button {
+button.mdc-button {
   margin: 2px;
-  
+  display: inline-block !important;
+  width: unset !important;
+  min-width: unset !important;
+  max-width: unset !important;
+  span {
+    font-family: "Playfulist" !important;
+  }
+}
+.mdc-button__label {
+  font-family: "Playfulist" !important;
 }

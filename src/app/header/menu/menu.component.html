@@ -5,31 +5,34 @@
     /></a>
   </span>
 
-  @for (item of items; track $index) {
-  <button mat-flat-button [color]="item.color" [routerLink]="item.link">
-    <mat-icon
-      aria-hidden="false"
-      aria-label="Example home icon"
-      [fontIcon]="item.icon['icon']"
-    ></mat-icon>
-    {{ item.title }}
-  </button>
-  } @empty {
-  <div>we dont have anything</div>
-  } @if(single_item.title === 'Upload New Car') {
-  <h1>about</h1>
-  }
-  <!-- <nb-menu [items]="items" routerLinkActive="active"> </nb-menu> -->
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row">
+    @for (item of items; track $index) {
+    <button mat-flat-button [color]="item.color" [routerLink]="item.link">
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Example home icon"
+        [fontIcon]="item.icon['icon']"
+      ></mat-icon>
+      {{ item.title }}
+    </button>
 
-  @defer (on idle) {
-  <div>defer</div>
-  } @defer(on viewport) {
-  <div>this is not visible or right the opposite</div>
-  } @loading (after 150ms; minimum 150ms) {
-  <div>loading ...</div>
-  } @placeholder (minimum 150ms) {
-  <div>placeholder</div>
-  } @error {
-  <div>error</div>
-  }
+    } @empty {
+    <div>we dont have anything</div>
+    } @if(single_item.title === 'Upload New Car') {
+    <h1>about</h1>
+    }
+    <!-- <nb-menu [items]="items" routerLinkActive="active"> </nb-menu> -->
+
+    @defer (on idle) {
+    <div>defer</div>
+    } @defer(on viewport) {
+    <div>this is not visible or right the opposite</div>
+    } @loading (after 150ms; minimum 150ms) {
+    <div>loading ...</div>
+    } @placeholder (minimum 150ms) {
+    <div>placeholder</div>
+    } @error {
+    <div>error</div>
+    }
+  </div>
 </div>

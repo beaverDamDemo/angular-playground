@@ -1,0 +1,12 @@
+<section>
+  <h2>opravki works!</h2>
+  <app-top-part></app-top-part>
+  @for (item of opravki; track $index) {
+  <ul>
+    <li>
+      <span style="display: inline-block; width: 100px;">{{ item.id }}</span
+      >{{ item.text }}
+    </li>
+  </ul>
+  }
+</section>

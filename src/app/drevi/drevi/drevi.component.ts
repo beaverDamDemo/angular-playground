@@ -6,9 +6,10 @@ import {
   Signal,
   signal,
   computed,
+  effect,
 } from '@angular/core';
 import { ReactiveFormsModule, Validators } from '@angular/forms';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, interval } from 'rxjs';
 
 interface Drev {
   title: string;
@@ -45,10 +46,14 @@ export class DreviComponent implements OnInit {
   sumOfItemsPercentageComputed: Signal<number> = computed(() => {
     return this.writableSingalcek() * 100;
   });
-  sumOfItemsPercentageRxjs: BehaviorSubject<number> =
+  sumOfItemsPercentageRxjs$: BehaviorSubject<number> =
     new BehaviorSubject<number>(0);
 
-  constructor() {}
+  constructor() {
+    effect(()=>{
+      console.log(this.sumOfItemsPercentageComputed())
+    })
+  }
 
   ngOnInit(): void {}
 
@@ -56,13 +61,13 @@ export class DreviComponent implements OnInit {
     this.sumOfItems += 1;
     this.signalcek.set(this.sumOfItems);
     this.writableSingalcek.set(this.sumOfItems);
-    this.sumOfItemsPercentageRxjs.next(this.sumOfItems * 100);
+    this.sumOfItemsPercentageRxjs$.next(this.sumOfItems * 100);
   }
 
   removeItem() {
     this.sumOfItems -= 1;
     this.signalcek.set(this.sumOfItems);
     this.writableSingalcek.set(this.sumOfItems);
-    this.sumOfItemsPercentageRxjs.next(this.sumOfItems * 100);
+    this.sumOfItemsPercentageRxjs$.next(this.sumOfItems * 100);
   }
 }

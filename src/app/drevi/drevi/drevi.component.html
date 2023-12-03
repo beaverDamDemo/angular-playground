@@ -8,7 +8,7 @@
   <button mat-button color="primary" (click)="addItem()">
     <mat-icon>add</mat-icon>
   </button>
-  <button mat-button color="warn" (click)="removeItem()">
+  <button mat-button color="warn" (click)="removeItem()" >
     <mat-icon>delete</mat-icon>
   </button>
 </div>
@@ -17,4 +17,4 @@
 <p>sum of items: {{ sumOfItems }}</p>
 <p>signalcek: {{ signalcek() }}</p>
 <p>sumOfItemsPercentageComputed: {{ sumOfItemsPercentageComputed() }}</p>
-<p>sumOfItemsPercentageRxjs: {{ sumOfItemsPercentageRxjs.getValue() }}</p>
+<p>sumOfItemsPercentageRxjs$: {{ sumOfItemsPercentageRxjs$.getValue() }}</p>

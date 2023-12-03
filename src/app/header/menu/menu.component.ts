@@ -87,6 +87,12 @@ export class MenuComponent implements OnInit {
       color: 'primary',
       icon: { icon: 'sun', pack: 'eva' },
     },
+    {
+      title: 'opravki',
+      link: 'opravki',
+      color: 'warn',
+      icon: { icon: 'cast-outline', pack: 'eva' },
+    },
   ];
   single_item = this.items[2];
   constructor() {}

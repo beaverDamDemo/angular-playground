@@ -96,6 +96,11 @@ const routes: Routes = [
       import('./cesen/cesen.component').then((m) => m.CesenComponent),
   },
   {
+    path: 'opravki',
+    loadComponent: () =>
+      import('./opravki/opravki.component').then((t) => t.OpravkiComponent),
+  },
+  {
     path: '**',
     component: PageNotFoundComponent,
   },

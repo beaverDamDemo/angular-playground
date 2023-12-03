@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, booleanAttribute } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { BelezkaService } from 'src/app/services/belezka.service';
 import { Motor } from 'src/app/types/motor';
@@ -12,7 +12,7 @@ export class MotorComponent implements OnInit {
   motorji: Motor[] = [];
   _filterText: string = '';
   filteredMotorji: Motor[] = [];
-
+  @Input({ transform: booleanAttribute }) disabled: boolean = false;
   get filterText() {
     return this._filterText;
   }
@@ -124,6 +124,11 @@ export class MotorComponent implements OnInit {
     });
 
     this.filteredMotorji = this.motorji;
+    this.filteredMotorji.forEach((f) => {
+      const numberRegexG = /\d$/g;
+      const zyl: unknown = f.configuration.match(numberRegexG)[0];
+      f.unitaryDisplacement = Math.round(f.displacement / (zyl as number));
+    });
   }
   onShowDetails(motor: {
     name: string;
